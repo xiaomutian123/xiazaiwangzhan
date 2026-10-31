@@ -1,0 +1,3207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://xx.youxi186.com/shop/yxc/Galaxy S21</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 15px;
+            min-height: 100vh;
+        }
+        .header {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: slideDown 0.5s ease-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .tab-bar {
+            display: flex;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 5px;
+            margin-bottom: 20px;
+            animation: fadeScale 0.5s ease-out;
+        }
+        @keyframes fadeScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 25px;
+            font-weight: 500;
+            cursor: pointer;
+            color: white;
+            transition: all 0.2s;
+            animation: tabAppear 0.4s ease-out;
+            animation-fill-mode: both;
+        }
+        .tab:nth-child(1) { animation-delay: 0.1s; }
+        .tab:nth-child(2) { animation-delay: 0.2s; }
+        @keyframes tabAppear {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tab.active {
+            background: rgba(255,255,255,0.2);
+        }
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            animation: cardAppear 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @keyframes cardAppear {
+            from { opacity: 0; transform: scale(0.8) rotate(-2deg); }
+            to { opacity: 1; transform: scale(1) rotate(0); }
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: titleSlide 0.4s ease-out;
+        }
+        @keyframes titleSlide {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        input, button, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            font-size: 16px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            backdrop-filter: blur(5px);
+            transition: all 0.2s;
+            animation: inputAppear 0.4s ease-out;
+            animation-fill-mode: both;
+        }
+        input:nth-of-type(1) { animation-delay: 0.1s; }
+        input:nth-of-type(2) { animation-delay: 0.15s; }
+        select { animation-delay: 0.2s; }
+        button { animation-delay: 0.25s; }
+        @keyframes inputAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.15);
+        }
+        button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: buttonPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @keyframes buttonPop {
+            from { opacity: 0; transform: scale(0.6) rotate(-5deg); }
+            to { opacity: 1; transform: scale(1) rotate(0); }
+        }
+        button:hover:not(:disabled) {
+            background: rgba(255,255,255,0.3);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .result {
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: none;
+            animation: resultPop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @keyframes resultPop {
+            from { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+            to { opacity: 1; transform: scale(1) rotate(0); }
+        }
+        .result.success {
+            background: rgba(40,167,69,0.3);
+            color: #d4edda;
+            display: block;
+        }
+        .result.error {
+            background: rgba(220,53,69,0.3);
+            color: #f8d7da;
+            display: block;
+        }
+        .import-area {
+            border: 2px dashed rgba(40,167,69,0.5);
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            background: rgba(40,167,69,0.1);
+            backdrop-filter: blur(5px);
+            animation: dashAppear 0.6s ease-out;
+        }
+        @keyframes dashAppear {
+            from { opacity: 0; transform: scale(0.9) rotate(1deg); }
+            to { opacity: 1; transform: scale(1) rotate(0); }
+        }
+        .file-input {
+            display: none;
+        }
+        .file-label {
+            background: rgba(40,167,69,0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: 500;
+            transition: all 0.2s;
+            animation: labelPulse 2s infinite;
+        }
+        @keyframes labelPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .file-label:hover {
+            background: rgba(40,167,69,0.4);
+        }
+        .preview-area {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 13px;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            animation: slideUp 0.3s;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            color: white;
+            transition: all 0.2s;
+            animation: itemSlide 0.4s ease-out;
+            animation-fill-mode: both;
+        }
+        .card-item:nth-child(1) { animation-delay: 0.1s; }
+        .card-item:nth-child(2) { animation-delay: 0.15s; }
+        .card-item:nth-child(3) { animation-delay: 0.2s; }
+        .card-item:nth-child(4) { animation-delay: 0.25s; }
+        .card-item:nth-child(5) { animation-delay: 0.3s; }
+        @keyframes itemSlide {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .card-item:hover {
+            transform: translateX(5px);
+        }
+        .card-item.using { border-left-color: #ff9800; background: rgba(255,152,0,0.2); }
+        .card-item.used { border-left-color: #28a745; background: rgba(40,167,69,0.2); }
+        .card-item.expired { border-left-color: #dc3545; background: rgba(220,53,69,0.2); }
+        .card-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .card-no {
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+        .value-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            animation: tagGlow 2s infinite;
+        }
+        @keyframes tagGlow {
+            0%, 100% { box-shadow: 0 0 5px rgba(255,255,255,0.2); }
+            50% { box-shadow: 0 0 15px rgba(255,255,255,0.4); }
+        }
+        .logout-btn {
+            background: rgba(255,152,0,0.3);
+            margin-top: 10px;
+        }
+        .logout-btn:hover {
+            background: rgba(255,152,0,0.4);
+        }
+        .using-tag {
+            background: rgba(255,152,0,0.3);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .warning-message {
+            background: rgba(220,53,69,0.3);
+            color: #f8d7da;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            animation: shake 0.5s ease-in-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+            20%, 40%, 60%, 80% { transform: translateX(2px); }
+        }
+        .warning-message::before {
+            content: "⚠️ ";
+            font-size: 16px;
+        }
+        .login-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border-radius: 20px;
+            animation: overlayFade 0.3s;
+        }
+        @keyframes overlayFade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .info-line {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .info-label {
+            width: 70px;
+            color: rgba(255,255,255,0.6);
+        }
+        .info-value {
+            flex: 1;
+        }
+        .expire-time {
+            color: #ff9800;
+            font-weight: 500;
+        }
+        .create-time {
+            color: #28a745;
+        }
+        .start-btn {
+            background: rgba(255,152,0,0.3);
+            font-size: 18px;
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .game-card {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 12px 8px;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+            animation: cardFloat 3s infinite;
+            animation-delay: calc(var(--i) * 0.1s);
+        }
+        .game-card:nth-child(1) { --i: 1; animation-name: float1; }
+        .game-card:nth-child(2) { --i: 2; animation-name: float2; }
+        .game-card:nth-child(3) { --i: 3; animation-name: float3; }
+        .game-card:nth-child(4) { --i: 4; animation-name: float4; }
+        .game-card:nth-child(5) { --i: 5; animation-name: float5; }
+        .game-card:nth-child(6) { --i: 6; animation-name: float6; }
+        .game-card:nth-child(7) { --i: 7; animation-name: float7; }
+        .game-card:nth-child(8) { --i: 8; animation-name: float8; }
+        .game-card:nth-child(9) { --i: 9; animation-name: float9; }
+        .game-card:nth-child(10) { --i: 10; animation-name: float10; }
+        .game-card:nth-child(11) { --i: 11; animation-name: float11; }
+        .game-card:nth-child(12) { --i: 12; animation-name: float12; }
+        
+        @keyframes float1 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+        @keyframes float2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+        @keyframes float3 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+        @keyframes float4 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        @keyframes float5 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px) rotate(1deg); } }
+        @keyframes float6 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px) rotate(-1deg); } }
+        @keyframes float7 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px) scale(1.02); } }
+        @keyframes float8 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px) scale(1.01); } }
+        @keyframes float9 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px) rotate(1deg); } }
+        @keyframes float10 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px) rotate(-1deg); } }
+        @keyframes float11 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px) scale(1.02); } }
+        @keyframes float12 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px) scale(1.01); } }
+        
+        .game-card:hover:not(.disabled) {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05) translateY(-5px);
+        }
+        .game-card.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .game-card.special {
+            background: rgba(255,152,0,0.2);
+        }
+        .game-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+            animation: iconSpin 10s linear infinite;
+        }
+        @keyframes iconSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .game-name {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        .game-desc {
+            font-size: 10px;
+            opacity: 0.8;
+        }
+        .points-display {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            animation: pointsGlow 2s infinite;
+        }
+        @keyframes pointsGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(255,152,0,0.2); }
+            50% { box-shadow: 0 0 20px rgba(255,152,0,0.4); }
+        }
+        .points-num {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff9800;
+        }
+        .back-btn {
+            background: rgba(255,255,255,0.2);
+            margin-top: 10px;
+            animation: backSlide 0.5s ease-out;
+        }
+        @keyframes backSlide {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .cooldown-timer {
+            font-size: 13px;
+            color: #ff9800;
+            margin-top: 5px;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .game-result {
+            text-align: center;
+            font-size: 16px;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            animation: resultSlide 0.4s ease-out;
+        }
+        @keyframes resultSlide {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .game-result.win {
+            background: rgba(40,167,69,0.3);
+            color: #d4edda;
+        }
+        .game-result.lose {
+            background: rgba(220,53,69,0.3);
+            color: #f8d7da;
+        }
+        .enter-animation {
+            animation: pageEnter 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @keyframes pageEnter {
+            from { opacity: 0; transform: scale(0.7) rotate(-5deg); }
+            to { opacity: 1; transform: scale(1) rotate(0); }
+        }
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        .achievement-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            transition: all 0.2s;
+            animation: achievementAppear 0.4s ease-out;
+            animation-fill-mode: both;
+        }
+        .achievement-card:nth-child(1) { animation-delay: 0.1s; }
+        .achievement-card:nth-child(2) { animation-delay: 0.15s; }
+        .achievement-card:nth-child(3) { animation-delay: 0.2s; }
+        .achievement-card:nth-child(4) { animation-delay: 0.25s; }
+        .achievement-card:nth-child(5) { animation-delay: 0.3s; }
+        .achievement-card:nth-child(6) { animation-delay: 0.35s; }
+        .achievement-card:nth-child(7) { animation-delay: 0.4s; }
+        @keyframes achievementAppear {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .achievement-card.unlocked {
+            border-color: #ff9800;
+            background: rgba(255,152,0,0.2);
+            animation: unlockPulse 2s infinite;
+        }
+        @keyframes unlockPulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(255,152,0,0.3); }
+            50% { box-shadow: 0 0 20px rgba(255,152,0,0.5); }
+        }
+        .achievement-icon {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+        .achievement-name {
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .daily-bonus {
+            background: rgba(255,152,0,0.2);
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: bonusPulse 2s infinite;
+        }
+        @keyframes bonusPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+        }
+        .daily-bonus button {
+            width: auto;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            margin: 0;
+        }
+        .daily-bonus button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .card-format {
+            font-family: monospace;
+            background: rgba(255,255,255,0.2);
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: white;
+        }
+        .game-stats {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            color: white;
+            animation: statsAppear 0.5s ease-out;
+        }
+        @keyframes statsAppear {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff9800;
+        }
+        .stat-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.8);
+        }
+        .game-history {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            border-radius: 8px;
+            max-height: 80px;
+            overflow-y: auto;
+            font-size: 11px;
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.8);
+            animation: historyAppear 0.5s ease-out;
+        }
+        @keyframes historyAppear {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .history-item {
+            padding: 2px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            animation: historyItem 0.3s ease-out;
+            animation-fill-mode: both;
+        }
+        .history-item:nth-child(1) { animation-delay: 0.1s; }
+        .history-item:nth-child(2) { animation-delay: 0.15s; }
+        .history-item:nth-child(3) { animation-delay: 0.2s; }
+        @keyframes historyItem {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .history-item.win { color: #28a745; }
+        .history-item.lose { color: #dc3545; }
+        
+        /* 扫雷游戏样式 */
+        .minesweeper-container {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            animation: mineAppear 0.5s ease-out;
+        }
+        @keyframes mineAppear {
+            from { opacity: 0; transform: scale(0.9) rotate(1deg); }
+            to { opacity: 1; transform: scale(1) rotate(0); }
+        }
+        .minesweeper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .mine-counter {
+            background: rgba(0,0,0,0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ff9800;
+            animation: counterPulse 2s infinite;
+        }
+        @keyframes counterPulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(255,152,0,0.3); }
+            50% { box-shadow: 0 0 20px rgba(255,152,0,0.5); }
+        }
+        .mine-reset {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+            animation: resetPulse 2s infinite;
+        }
+        @keyframes resetPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .mine-reset:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .minesweeper-grid {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 3px;
+            background: rgba(0,0,0,0.2);
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .mine-cell {
+            aspect-ratio: 1;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.15s;
+            color: white;
+            animation: cellAppear 0.3s ease-out;
+            animation-fill-mode: both;
+        }
+        .mine-cell:nth-child(9n+1) { animation-delay: calc(0.01s * var(--i, 0)); }
+        @keyframes cellAppear {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .mine-cell:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+        .mine-cell.revealed {
+            background: rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.1);
+        }
+        .mine-cell.flagged::after {
+            content: '🚩';
+            font-size: 12px;
+            animation: flagWave 0.5s ease-in-out infinite;
+        }
+        @keyframes flagWave {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+        }
+        .mine-cell.mine {
+            background: rgba(220,53,69,0.5);
+        }
+        .mine-cell.mine::after {
+            content: '💣';
+            font-size: 12px;
+        }
+        .mine-cell.win {
+            background: rgba(40,167,69,0.3);
+        }
+        .mine-cell.win::after {
+            content: '✓';
+            color: #28a745;
+        }
+        .mine-controls {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .mine-controls button {
+            flex: 1;
+            padding: 8px;
+            font-size: 13px;
+            margin-bottom: 0;
+            animation: controlAppear 0.4s ease-out;
+        }
+        .mine-controls button:nth-child(1) { animation-delay: 0.1s; }
+        .mine-controls button:nth-child(2) { animation-delay: 0.15s; }
+        @keyframes controlAppear {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .bet-input {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .bet-input input {
+            flex: 2;
+            margin-bottom: 0;
+            animation: betInputAppear 0.4s ease-out;
+        }
+        .bet-input button {
+            flex: 1;
+            margin-bottom: 0;
+            animation: betButtonAppear 0.4s ease-out;
+        }
+        @keyframes betInputAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes betButtonAppear {
+            from { opacity: 0; transform: translateX(10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .time-detail {
+            font-size: 11px;
+            color: rgba(255,255,255,0.6);
+            margin-left: 5px;
+        }
+        
+        /* 问答游戏样式 */
+        .quiz-container {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            animation: quizAppear 0.5s ease-out;
+        }
+        @keyframes quizAppear {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .question-box {
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .question-text {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .question-category {
+            display: inline-block;
+            background: rgba(255,152,0,0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #ff9800;
+            margin-bottom: 10px;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .option-btn {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 15px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+            animation: optionAppear 0.3s ease-out;
+            animation-fill-mode: both;
+        }
+        .option-btn:nth-child(1) { animation-delay: 0.1s; }
+        .option-btn:nth-child(2) { animation-delay: 0.15s; }
+        .option-btn:nth-child(3) { animation-delay: 0.2s; }
+        .option-btn:nth-child(4) { animation-delay: 0.25s; }
+        @keyframes optionAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .option-btn:hover:not(:disabled) {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+        .option-btn.correct {
+            background: rgba(40,167,69,0.5);
+            border-color: #28a745;
+        }
+        .option-btn.wrong {
+            background: rgba(220,53,69,0.5);
+            border-color: #dc3545;
+        }
+        .option-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        .quiz-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin-top: 15px;
+        }
+        .quiz-score {
+            font-size: 18px;
+            color: #ff9800;
+            font-weight: bold;
+        }
+        .quiz-timer {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 16px;
+            color: #ff9800;
+        }
+        .next-question-btn {
+            background: rgba(255,152,0,0.3);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .next-question-btn:hover {
+            background: rgba(255,152,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔑 PLAY GAME 卡密登录</h1>
+        <p>公告:</p>
+        <p>欢迎使用Galaxy S21</p> 
+        <p>要卡密/bug反馈/订单查询/售后更新</p>
+        <p>加QQ2944155376</p>
+        <p>版本号:1.01.05384</p>
+        <p>更新日志:2/21日更新</p>
+        <p>更新内容:</p>
+        <p>1.卡密验证系统加强</p>
+        <p>2.PLAY GAME 正式开放公益</p>
+        <p>3.PLAY GAME 代理招收代理 3人 目前1人先到先得</p>
+        <p>作者:冯**     周**</p>
+        <p>有疑问联系作者</p>
+    </div>
+
+    <div class="tab-bar">
+        <div class="tab active" onclick="showTab('verify')">验证</div>
+        <div class="tab" onclick="showTab('mycards')">我的卡密</div>
+    </div>
+
+    <!-- 验证页面 -->
+    <div id="verifyPage">
+        <div class="card">
+            <div class="card-title">🔑 输入卡密</div>
+            <input type="text" id="cardNoInput" placeholder="请输入有效卡密登录" autocomplete="off">
+            <button onclick="handleCardInput()" id="loginBtn">确 认</button>
+            
+            <div class="card-title" style="margin-top: 20px;">📥 导入卡密</div>
+            <div class="import-area">
+                <input type="file" id="userFileInput" class="file-input" accept=".txt" onchange="previewUserFile()">
+                <label for="userFileInput" class="file-label">选择加密文件导入</label>
+                <div id="userPreview" class="preview-area" style="display: none;"></div>
+                <button id="confirmImportBtn" style="display: none; margin-top: 10px;" onclick="confirmUserImport()">确认导入</button>
+            </div>
+            
+            <div id="result" class="result">
+                <span class="close-btn" onclick="hideResult()">×</span>
+                <span id="resultMessage"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 我的卡密页面 -->
+    <div id="mycardsPage" style="display: none;">
+        <div class="card" style="position: relative;">
+            <div class="card-title">
+                <span>📋 我的卡密</span>
+                <span id="userLoginStatus" style="font-size: 14px;"></span>
+            </div>
+            
+            <!-- 登录遮罩层 -->
+            <div id="loginOverlay" class="login-overlay" style="display: flex;">
+                <div style="text-align: center;">
+                    <div style="font-size: 40px; margin-bottom: 10px;">🔒</div>
+                    <h3 style="margin-bottom: 10px;">请先登录</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 15px;">在验证页面输入卡号登录</p>
+                    <button onclick="showTab('verify')" style="width: auto; padding: 10px 25px;">去登录</button>
+                </div>
+            </div>
+            
+            <!-- 卡密内容（登录后显示） -->
+            <div id="cardContent" style="display: none;">
+                <!-- 红色温馨提示 -->
+                <div class="warning-message">
+                    请先退出登录再关闭软件，否则当前卡密无法登录！
+                </div>
+                
+                <!-- 积分显示 -->
+                <div class="points-display">
+                    <span>🎮 娱乐积分</span>
+                    <span class="points-num" id="userPoints">0</span>
+                </div>
+                
+                <!-- 每日福利 -->
+                <div class="daily-bonus">
+                    <span>📅 每日福利</span>
+                    <button onclick="claimDailyBonus()">领取</button>
+                </div>
+                
+                <input type="text" id="searchMyCard" placeholder="搜索卡号" onkeyup="showMyCards()" style="margin-bottom: 12px;">
+                <select id="statusMyFilter" onchange="showMyCards()" style="margin-bottom: 12px;">
+                    <option value="all">全部状态</option>
+                    <option value="0">未使用</option>
+                    <option value="4">使用中</option>
+                    <option value="1">已使用</option>
+                    <option value="3">已过期</option>
+                </select>
+                <div id="myCardList"></div>
+                
+                <!-- 启动按钮 -->
+                <button onclick="showGames()" class="start-btn">🚀 进入娱乐中心</button>
+                
+                <button onclick="logout()" class="logout-btn">退出登录（释放卡密）</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 娱乐中心页面 -->
+    <div id="gamesPage" style="display: none;">
+        <div class="card enter-animation">
+            <div class="card-title">
+                <span>🎮 娱乐中心</span>
+                <span style="font-size: 14px;" id="gamesPoints">0 积分</span>
+            </div>
+            
+            <!-- 积分显示 -->
+            <div class="points-display">
+                <span>💰 可用积分</span>
+                <span class="points-num" id="gamesPointsDisplay">0</span>
+            </div>
+            
+            <!-- 游戏统计 -->
+            <div class="game-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalPlayed">0</div>
+                    <div class="stat-label">总游玩</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="totalWins">0</div>
+                    <div class="stat-label">胜利</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="winRate">0%</div>
+                    <div class="stat-label">胜率</div>
+                </div>
+            </div>
+            
+            <!-- 成就系统 -->
+            <div class="card-title" style="font-size: 16px;">🏆 成就系统</div>
+            <div class="achievement-grid" id="achievementsList"></div>
+            
+            <!-- 游戏历史 -->
+            <div class="card-title" style="font-size: 16px;">📜 最近游戏记录</div>
+            <div class="game-history" id="gameHistory"></div>
+            
+            <!-- 冷却提示（5秒） -->
+            <div id="cooldownMessage" style="display: none; background: rgba(255,193,7,0.2); color: #ffc107; padding: 8px; border-radius: 8px; margin-bottom: 12px; text-align: center; font-size: 14px;">
+                ⏳ 冷却中... 请等待 <span id="cooldownSeconds">5</span> 秒
+            </div>
+            
+            <!-- 游戏网格 -->
+            <div class="card-title" style="font-size: 16px;">🎲 小游戏大全</div>
+            <div class="game-grid">
+                <div class="game-card" id="gameDaily" onclick="playGame('daily')">
+                    <div class="game-icon">📅</div>
+                    <div class="game-name">每日签到</div>
+                    <div class="game-desc">免费得5-15</div>
+                </div>
+                <div class="game-card" id="gameWheel" onclick="playGame('wheel')">
+                    <div class="game-icon">🎡</div>
+                    <div class="game-name">幸运转盘</div>
+                    <div class="game-desc">8积分 | 最高50</div>
+                </div>
+                <div class="game-card" id="gameScratch" onclick="playGame('scratch')">
+                    <div class="game-icon">🎫</div>
+                    <div class="game-name">刮刮乐</div>
+                    <div class="game-desc">5积分 | 最高30</div>
+                </div>
+                <div class="game-card" id="gameDice" onclick="playGame('dice')">
+                    <div class="game-icon">🎲</div>
+                    <div class="game-name">掷骰子</div>
+                    <div class="game-desc">3积分 | 1-6倍</div>
+                </div>
+                <div class="game-card" id="gameSlot" onclick="playGame('slot')">
+                    <div class="game-icon">🎰</div>
+                    <div class="game-name">老虎机</div>
+                    <div class="game-desc">15积分 | 大奖100</div>
+                </div>
+                <div class="game-card" id="gameTreasure" onclick="playGame('treasure')">
+                    <div class="game-icon">💎</div>
+                    <div class="game-name">挖宝藏</div>
+                    <div class="game-desc">10积分 | 宝藏翻倍</div>
+                </div>
+                <div class="game-card special" id="gameMine" onclick="showMinesweeper()">
+                    <div class="game-icon">💣</div>
+                    <div class="game-name">经典扫雷</div>
+                    <div class="game-desc">真正的扫雷！</div>
+                </div>
+                <div class="game-card" id="gameCard" onclick="playGame('card')">
+                    <div class="game-icon">🃏</div>
+                    <div class="game-name">抽扑克</div>
+                    <div class="game-desc">4积分 | 猜大小</div>
+                </div>
+                <div class="game-card" id="gameCoin" onclick="playGame('coin')">
+                    <div class="game-icon">🪙</div>
+                    <div class="game-name">抛硬币</div>
+                    <div class="game-desc">2积分 | 正反双倍</div>
+                </div>
+                <div class="game-card" id="gameFish" onclick="playGame('fish')">
+                    <div class="game-icon">🐟</div>
+                    <div class="game-name">捕鱼</div>
+                    <div class="game-desc">12积分 | 最高80</div>
+                </div>
+                <div class="game-card special" id="gameLucky" onclick="playGame('lucky')">
+                    <div class="game-icon">🍀</div>
+                    <div class="game-name">幸运抽奖</div>
+                    <div class="game-desc">20积分 | 超级大奖</div>
+                </div>
+                <div class="game-card" id="gameQuiz" onclick="showQuiz()">
+                    <div class="game-icon">❓</div>
+                    <div class="game-name">智力问答</div>
+                    <div class="game-desc">7积分 | 300+题库</div>
+                </div>
+            </div>
+            
+            <!-- 扫雷游戏区域（默认隐藏） -->
+            <div id="minesweeperArea" style="display: none;">
+                <div class="minesweeper-container">
+                    <div class="minesweeper-header">
+                        <div class="mine-counter" id="mineCounter">💣 10</div>
+                        <div class="mine-reset" onclick="initMinesweeper()">🔄 新游戏</div>
+                    </div>
+                    
+                    <!-- 下注区域 -->
+                    <div class="bet-input">
+                        <input type="number" id="mineBet" value="10" min="1" max="1000" placeholder="下注积分">
+                        <button onclick="startMinesweeper()" id="startMineBtn">开始游戏</button>
+                    </div>
+                    
+                    <!-- 扫雷网格 -->
+                    <div class="minesweeper-grid" id="minesweeperGrid"></div>
+                    
+                    <!-- 游戏控制 -->
+                    <div class="mine-controls">
+                        <button onclick="toggleFlagMode()" id="flagModeBtn">🚩 插旗模式</button>
+                        <button onclick="autoReveal()" id="autoRevealBtn">🔍 自动翻开</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 问答游戏区域（默认隐藏） -->
+            <div id="quizArea" style="display: none;">
+                <div class="quiz-container">
+                    <div class="question-box">
+                        <span class="question-category" id="quizCategory">📚 选择题</span>
+                        <div class="question-text" id="quizQuestion">加载题目中...</div>
+                        <div class="options-grid" id="quizOptions"></div>
+                        
+                        <div class="quiz-footer">
+                            <div class="quiz-score" id="quizScore">得分: 0/10</div>
+                            <div class="quiz-timer" id="quizTimer">⏱️ 30s</div>
+                            <button class="next-question-btn" id="nextQuestionBtn" onclick="nextQuizQuestion()" style="display: none;">下一题</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 游戏结果 -->
+            <div id="gameResult" class="game-result" style="display: none;"></div>
+            
+            <button onclick="backToMyCards()" class="back-btn">返 回</button>
+        </div>
+    </div>
+
+    <!-- 管理后台（暗号进入） -->
+    <div id="adminPage" style="display: none;">
+        <div class="card">
+            <div class="card-title" style="color: #f44336;">⚙️ 管理后台</div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); padding: 10px; text-align: center; border-radius: 10px; color: white;">
+                    <div class="stat-num" id="totalCards">0</div>
+                    <div>总卡密</div>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); padding: 10px; text-align: center; border-radius: 10px; color: white;">
+                    <div class="stat-num" id="unusedCards">0</div>
+                    <div>未使用</div>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); padding: 10px; text-align: center; border-radius: 10px; color: white;">
+                    <div class="stat-num" id="usingCards">0</div>
+                    <div>使用中</div>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); padding: 10px; text-align: center; border-radius: 10px; color: white;">
+                    <div class="stat-num" id="usedCards">0</div>
+                    <div>已使用</div>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); padding: 10px; text-align: center; border-radius: 10px; color: white;">
+                    <div class="stat-num" id="expiredCards">0</div>
+                    <div>已过期</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <div class="batch-btn primary" onclick="selectAllCards()" style="flex:1; padding:12px; background:rgba(102,126,234,0.3); color:white; text-align:center; border-radius:10px; cursor:pointer;">全选</div>
+                <div class="batch-btn" onclick="deselectAllCards()" style="flex:1; padding:12px; background:rgba(255,255,255,0.1); color:white; text-align:center; border-radius:10px; cursor:pointer;">取消</div>
+                <div class="batch-btn primary" onclick="exportSelectedCards()" style="flex:1; padding:12px; background:rgba(40,167,69,0.3); color:white; text-align:center; border-radius:10px; cursor:pointer;">导出选中</div>
+            </div>
+            
+            <div style="font-size: 13px; margin-bottom: 10px; color:white;"><span id="selectedCount">0</span> 个卡密已选中</div>
+            
+            <div class="import-area" style="border-color: #667eea; margin-bottom:15px;">
+                <div style="margin-bottom: 10px; color:white;">📥 导入卡密</div>
+                <input type="file" id="adminFileInput" class="file-input" accept=".txt,.csv,.json" onchange="previewAdminFile()">
+                <label for="adminFileInput" class="file-label" style="background: rgba(102,126,234,0.3);">选择文件</label>
+                <div id="adminPreview" class="preview-area" style="display: none;"></div>
+                <button id="adminConfirmImportBtn" style="display: none; background: rgba(102,126,234,0.3); margin-top: 10px;" onclick="confirmAdminImport()">确认导入</button>
+            </div>
+
+            <div style="margin-bottom:15px;">
+                <div style="font-weight:600; margin-bottom:10px; color:white;">➕ 生成卡密</div>
+                <div style="display:flex; gap:10px;">
+                    <input type="number" id="genCount" value="1" placeholder="数量" style="flex:2;">
+                    <input type="number" id="genValue" value="100" placeholder="价值" style="flex:2;">
+                    <input type="number" id="expireDays" value="30" placeholder="天数" style="flex:2;">
+                </div>
+                <button onclick="generateCards()" style="background: rgba(40,167,69,0.3); margin-top:10px;">生成</button>
+                <div style="font-size:12px; color:rgba(255,255,255,0.8); margin-top:5px;">格式: XXXX-XXXX-XXXX-XXXX | 到期时间: 23:59:59</div>
+            </div>
+
+            <div>
+                <div style="font-weight:600; margin-bottom:10px; color:white;">📋 所有卡密</div>
+                <input type="text" id="searchCard" placeholder="搜索卡号" onkeyup="showCards()" style="margin-bottom:10px;">
+                <select id="statusFilter" onchange="showCards()" style="margin-bottom:10px;">
+                    <option value="all">全部</option>
+                    <option value="0">未使用</option>
+                    <option value="4">使用中</option>
+                    <option value="1">已使用</option>
+                    <option value="2">已封禁</option>
+                    <option value="3">已过期</option>
+                </select>
+                <div id="cardList" style="max-height:400px; overflow-y:auto;"></div>
+                <button onclick="logoutAdmin()" style="background: rgba(255,255,255,0.1); margin-top:15px;">退出管理</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 🔐 暗号（只有你知道）
+        const ADMIN_SECRET = 'FJT121023';
+        const ENCRYPT_KEY = 'card_system_secret_key_2024';
+        
+        // 状态定义
+        const CARD_STATUS = {
+            UNUSED: 0,
+            USED: 1,
+            BANNED: 2,
+            EXPIRED: 3,
+            USING: 4
+        };
+        
+        let timeoutId = null;
+        let selectedCardIds = new Set();
+        let tempImportData = null;
+        let tempImportSource = null;
+        let currentUserCard = null;
+        let countdownInterval = null;
+        let userPoints = 100;
+        let cooldownActive = false;
+        let cooldownTimer = null;
+        let cooldownSeconds = 5;
+        
+        // 游戏统计
+        let gameStats = {
+            played: 0,
+            wins: 0,
+            history: []
+        };
+
+        // 成就系统
+        let achievements = {
+            firstWin: false,
+            lucky: false,
+            rich: false,
+            master: false,
+            daily: false,
+            lucky7: false,
+            bigWinner: false,
+            quizMaster: false,
+            quizGenius: false
+        };
+
+        // 扫雷相关变量
+        let mineGrid = [];
+        let mineRevealed = [];
+        let mineFlagged = [];
+        let mineGameActive = false;
+        let mineTotalMines = 10;
+        let mineRows = 9;
+        let mineCols = 9;
+        let flagMode = false;
+        let mineBetAmount = 10;
+        let mineFirstClick = true;
+
+        // 300+ 题库（原始题目）
+        let rawQuizQuestions = [
+            // 常识类 (1-50)
+            { category: "🎓 常识", question: "一天有多少小时？", options: ["24小时", "12小时", "48小时", "36小时"], answer: 0 },
+            { category: "🎓 常识", question: "一年有多少个月？", options: ["12个月", "10个月", "13个月", "11个月"], answer: 0 },
+            { category: "🎓 常识", question: "一周有多少天？", options: ["7天", "5天", "6天", "8天"], answer: 0 },
+            { category: "🎓 常识", question: "彩虹有多少种颜色？", options: ["7种", "5种", "6种", "8种"], answer: 0 },
+            { category: "🎓 常识", question: "太阳从哪个方向升起？", options: ["东方", "西方", "南方", "北方"], answer: 0 },
+            { category: "🎓 常识", question: "蜜蜂采什么？", options: ["花蜜", "花粉", "树叶", "树汁"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物被称为“沙漠之舟”？", options: ["骆驼", "马", "驴", "牛"], answer: 0 },
+            { category: "🎓 常识", question: "哪种水果是红色的？", options: ["苹果", "香蕉", "梨", "橙子"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会喵喵叫？", options: ["猫", "狗", "鸡", "鸭"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会汪汪叫？", options: ["狗", "猫", "牛", "羊"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会咩咩叫？", options: ["羊", "牛", "马", "猪"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会哞哞叫？", options: ["牛", "羊", "马", "猪"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会咯咯叫？", options: ["鸡", "鸭", "鹅", "鸟"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会呱呱叫？", options: ["青蛙", "鸭子", "鹅", "鸟"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会哼哼叫？", options: ["猪", "牛", "羊", "马"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会嘶嘶叫？", options: ["蛇", "猫", "狗", "鸟"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会叽叽叫？", options: ["老鼠", "猫", "狗", "鸟"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会嗡嗡叫？", options: ["蜜蜂", "蚊子", "苍蝇", "蝉"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会吱吱叫？", options: ["猴子", "老鼠", "鸟", "猫"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会嗷嗷叫？", options: ["狼", "狗", "猫", "熊"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会吼吼叫？", options: ["狮子", "老虎", "熊", "大象"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会呜呜叫？", options: ["狗", "猫", "狼", "熊"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会啾啾叫？", options: ["小鸟", "猫", "狗", "老鼠"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会嘎嘎叫？", options: ["鸭子", "鹅", "鸡", "鸟"], answer: 0 },
+            { category: "🎓 常识", question: "哪种动物会咕咕叫？", options: ["鸽子", "鸡", "鸭", "鹅"], answer: 0 },
+            
+            // 科学类 (26-75)
+            { category: "🧪 科学", question: "水的沸点是多少摄氏度？", options: ["100°C", "0°C", "50°C", "200°C"], answer: 0 },
+            { category: "🧪 科学", question: "水的冰点是多少摄氏度？", options: ["0°C", "100°C", "-10°C", "10°C"], answer: 0 },
+            { category: "🧪 科学", question: "人体正常体温是多少摄氏度？", options: ["36-37°C", "30-31°C", "40-41°C", "20-21°C"], answer: 0 },
+            { category: "🧪 科学", question: "光速大约是多少？", options: ["30万公里/秒", "30万米/秒", "3万公里/秒", "300万公里/秒"], answer: 0 },
+            { category: "🧪 科学", question: "声音在空气中传播速度是多少？", options: ["340米/秒", "100米/秒", "1000米/秒", "34米/秒"], answer: 0 },
+            { category: "🧪 科学", question: "地球的卫星叫什么？", options: ["月球", "太阳", "火星", "金星"], answer: 0 },
+            { category: "🧪 科学", question: "太阳系最大的行星是？", options: ["木星", "土星", "地球", "火星"], answer: 0 },
+            { category: "🧪 科学", question: "离太阳最近的行星是？", options: ["水星", "金星", "地球", "火星"], answer: 0 },
+            { category: "🧪 科学", question: "离太阳最远的行星是？", options: ["海王星", "天王星", "土星", "木星"], answer: 0 },
+            { category: "🧪 科学", question: "地球有几个卫星？", options: ["1个", "0个", "2个", "3个"], answer: 0 },
+            { category: "🧪 科学", question: "火星有几个卫星？", options: ["2个", "0个", "1个", "3个"], answer: 0 },
+            { category: "🧪 科学", question: "木星有几个卫星？", options: ["79个", "50个", "100个", "30个"], answer: 0 },
+            { category: "🧪 科学", question: "土星有几个卫星？", options: ["82个", "70个", "90个", "60个"], answer: 0 },
+            { category: "🧪 科学", question: "天王星有几个卫星？", options: ["27个", "20个", "30个", "25个"], answer: 0 },
+            { category: "🧪 科学", question: "海王星有几个卫星？", options: ["14个", "10个", "15个", "12个"], answer: 0 },
+            { category: "🧪 科学", question: "冥王星有几个卫星？", options: ["5个", "3个", "4个", "6个"], answer: 0 },
+            { category: "🧪 科学", question: "人体有多少块骨头？", options: ["206块", "200块", "210块", "196块"], answer: 0 },
+            { category: "🧪 科学", question: "人体有多少颗牙齿？", options: ["32颗", "28颗", "30颗", "34颗"], answer: 0 },
+            { category: "🧪 科学", question: "人体有多少块肌肉？", options: ["600多块", "500多块", "700多块", "400多块"], answer: 0 },
+            { category: "🧪 科学", question: "心脏有几个心房？", options: ["4个", "2个", "3个", "1个"], answer: 0 },
+            { category: "🧪 科学", question: "大脑有几个半球？", options: ["2个", "1个", "3个", "4个"], answer: 0 },
+            { category: "🧪 科学", question: "人体有多少对染色体？", options: ["23对", "22对", "24对", "21对"], answer: 0 },
+            { category: "🧪 科学", question: "DNA的双螺旋结构是谁发现的？", options: ["沃森和克里克", "爱因斯坦", "牛顿", "达尔文"], answer: 0 },
+            { category: "🧪 科学", question: "元素周期表有多少个元素？", options: ["118个", "100个", "120个", "110个"], answer: 0 },
+            { category: "🧪 科学", question: "最轻的元素是什么？", options: ["氢", "氦", "氧", "碳"], answer: 0 },
+            { category: "🧪 科学", question: "最重的天然元素是什么？", options: ["铀", "钚", "镭", "钫"], answer: 0 },
+            
+            // 历史类 (76-125)
+            { category: "📜 历史", question: "中华人民共和国成立于哪一年？", options: ["1949年", "1947年", "1948年", "1950年"], answer: 0 },
+            { category: "📜 历史", question: "第一次世界大战爆发于哪一年？", options: ["1914年", "1918年", "1939年", "1945年"], answer: 0 },
+            { category: "📜 历史", question: "第二次世界大战爆发于哪一年？", options: ["1939年", "1914年", "1945年", "1941年"], answer: 0 },
+            { category: "📜 历史", question: "美国独立于哪一年？", options: ["1776年", "1789年", "1812年", "1865年"], answer: 0 },
+            { category: "📜 历史", question: "法国大革命爆发于哪一年？", options: ["1789年", "1776年", "1815年", "1848年"], answer: 0 },
+            { category: "📜 历史", question: "俄国十月革命爆发于哪一年？", options: ["1917年", "1905年", "1918年", "1921年"], answer: 0 },
+            { category: "📜 历史", question: "秦始皇统一中国在哪一年？", options: ["公元前221年", "公元前206年", "公元221年", "公元206年"], answer: 0 },
+            { category: "📜 历史", question: "唐朝建立于哪一年？", options: ["618年", "581年", "907年", "960年"], answer: 0 },
+            { category: "📜 历史", question: "宋朝建立于哪一年？", options: ["960年", "907年", "1127年", "1279年"], answer: 0 },
+            { category: "📜 历史", question: "元朝建立于哪一年？", options: ["1271年", "1206年", "1368年", "1234年"], answer: 0 },
+            { category: "📜 历史", question: "明朝建立于哪一年？", options: ["1368年", "1271年", "1644年", "1421年"], answer: 0 },
+            { category: "📜 历史", question: "清朝建立于哪一年？", options: ["1636年", "1616年", "1644年", "1912年"], answer: 0 },
+            { category: "📜 历史", question: "辛亥革命爆发于哪一年？", options: ["1911年", "1912年", "1900年", "1921年"], answer: 0 },
+            { category: "📜 历史", question: "五四运动爆发于哪一年？", options: ["1919年", "1921年", "1917年", "1925年"], answer: 0 },
+            { category: "📜 历史", question: "中国共产党成立于哪一年？", options: ["1921年", "1919年", "1927年", "1931年"], answer: 0 },
+            { category: "📜 历史", question: "长征开始于哪一年？", options: ["1934年", "1935年", "1936年", "1933年"], answer: 0 },
+            { category: "📜 历史", question: "抗日战争爆发于哪一年？", options: ["1937年", "1931年", "1945年", "1941年"], answer: 0 },
+            { category: "📜 历史", question: "南京大屠杀发生在哪一年？", options: ["1937年", "1938年", "1940年", "1945年"], answer: 0 },
+            { category: "📜 历史", question: "开国大典在哪一天？", options: ["1949年10月1日", "1949年9月1日", "1949年8月1日", "1949年7月1日"], answer: 0 },
+            { category: "📜 历史", question: "抗美援朝战争爆发于哪一年？", options: ["1950年", "1953年", "1949年", "1955年"], answer: 0 },
+            { category: "📜 历史", question: "文化大革命开始于哪一年？", options: ["1966年", "1968年", "1976年", "1964年"], answer: 0 },
+            { category: "📜 历史", question: "改革开放开始于哪一年？", options: ["1978年", "1976年", "1980年", "1985年"], answer: 0 },
+            { category: "📜 历史", question: "香港回归在哪一年？", options: ["1997年", "1999年", "2000年", "1995年"], answer: 0 },
+            { category: "📜 历史", question: "澳门回归在哪一年？", options: ["1999年", "1997年", "2000年", "2001年"], answer: 0 },
+            { category: "📜 历史", question: "北京奥运会举办于哪一年？", options: ["2008年", "2012年", "2004年", "2000年"], answer: 0 },
+            
+            // 地理类 (126-175)
+            { category: "🌍 地理", question: "世界上最大的海洋是？", options: ["太平洋", "大西洋", "印度洋", "北冰洋"], answer: 0 },
+            { category: "🌍 地理", question: "世界上最大的洲是？", options: ["亚洲", "非洲", "北美洲", "南美洲"], answer: 0 },
+            { category: "🌍 地理", question: "世界上最小的洲是？", options: ["大洋洲", "欧洲", "南极洲", "南美洲"], answer: 0 },
+            { category: "🌍 地理", question: "世界上最大的国家是？", options: ["俄罗斯", "加拿大", "中国", "美国"], answer: 0 },
+            { category: "🌍 地理", question: "世界上最小的国家是？", options: ["梵蒂冈", "摩纳哥", "圣马力诺", "列支敦士登"], answer: 0 },
+            { category: "🌍 地理", question: "世界上人口最多的国家是？", options: ["中国", "印度", "美国", "印尼"], answer: 0 },
+            { category: "🌍 地理", question: "世界上最高的山峰是？", options: ["珠穆朗玛峰", "乔戈里峰", "干城章嘉峰", "洛子峰"], answer: 0 },
+            { category: "🌍 地理", question: "世界上最长的河流是？", options: ["尼罗河", "亚马逊河", "长江", "密西西比河"], answer: 0 },
+            { category: "🌍 地理", question: "中国最长的河流是？", options: ["长江", "黄河", "珠江", "黑龙江"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的湖泊是？", options: ["青海湖", "鄱阳湖", "洞庭湖", "太湖"], answer: 0 },
+            { category: "🌍 地理", question: "中国最高的山峰是？", options: ["珠穆朗玛峰", "乔戈里峰", "贡嘎山", "慕士塔格峰"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的沙漠是？", options: ["塔克拉玛干沙漠", "古尔班通古特沙漠", "巴丹吉林沙漠", "腾格里沙漠"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的岛屿是？", options: ["台湾岛", "海南岛", "崇明岛", "舟山岛"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的半岛是？", options: ["山东半岛", "辽东半岛", "雷州半岛", "九龙半岛"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的平原是？", options: ["东北平原", "华北平原", "长江中下游平原", "关中平原"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的高原是？", options: ["青藏高原", "内蒙古高原", "黄土高原", "云贵高原"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的盆地是？", options: ["塔里木盆地", "准噶尔盆地", "柴达木盆地", "四川盆地"], answer: 0 },
+            { category: "🌍 地理", question: "中国最长的铁路是？", options: ["京九铁路", "京广铁路", "陇海铁路", "兰新铁路"], answer: 0 },
+            { category: "🌍 地理", question: "中国最长的公路是？", options: ["318国道", "109国道", "312国道", "320国道"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的城市是？", options: ["上海", "北京", "广州", "深圳"], answer: 0 },
+            { category: "🌍 地理", question: "中国最南端的城市是？", options: ["三沙市", "三亚市", "海口市", "湛江市"], answer: 0 },
+            { category: "🌍 地理", question: "中国最北端的城市是？", options: ["漠河市", "黑河市", "齐齐哈尔市", "哈尔滨市"], answer: 0 },
+            { category: "🌍 地理", question: "中国最东端的城市是？", options: ["抚远市", "佳木斯市", "牡丹江市", "鸡西市"], answer: 0 },
+            { category: "🌍 地理", question: "中国最西端的城市是？", options: ["喀什市", "和田市", "阿克苏市", "库尔勒市"], answer: 0 },
+            { category: "🌍 地理", question: "中国最大的港口是？", options: ["上海港", "宁波舟山港", "深圳港", "广州港"], answer: 0 },
+            
+            // 文学类 (176-200)
+            { category: "🎨 文学", question: "《西游记》的作者是谁？", options: ["吴承恩", "罗贯中", "施耐庵", "曹雪芹"], answer: 0 },
+            { category: "🎨 文学", question: "《三国演义》的作者是谁？", options: ["罗贯中", "吴承恩", "施耐庵", "曹雪芹"], answer: 0 },
+            { category: "🎨 文学", question: "《水浒传》的作者是谁？", options: ["施耐庵", "罗贯中", "吴承恩", "曹雪芹"], answer: 0 },
+            { category: "🎨 文学", question: "《红楼梦》的作者是谁？", options: ["曹雪芹", "罗贯中", "施耐庵", "吴承恩"], answer: 0 },
+            { category: "🎨 文学", question: "《封神演义》的作者是谁？", options: ["许仲琳", "吴承恩", "罗贯中", "施耐庵"], answer: 0 },
+            { category: "🎨 文学", question: "《聊斋志异》的作者是谁？", options: ["蒲松龄", "曹雪芹", "吴敬梓", "李汝珍"], answer: 0 },
+            { category: "🎨 文学", question: "《儒林外史》的作者是谁？", options: ["吴敬梓", "蒲松龄", "曹雪芹", "李汝珍"], answer: 0 },
+            { category: "🎨 文学", question: "《镜花缘》的作者是谁？", options: ["李汝珍", "吴敬梓", "蒲松龄", "曹雪芹"], answer: 0 },
+            { category: "🎨 文学", question: "《呐喊》的作者是谁？", options: ["鲁迅", "茅盾", "巴金", "老舍"], answer: 0 },
+            { category: "🎨 文学", question: "《子夜》的作者是谁？", options: ["茅盾", "鲁迅", "巴金", "老舍"], answer: 0 },
+            { category: "🎨 文学", question: "《家》的作者是谁？", options: ["巴金", "茅盾", "鲁迅", "老舍"], answer: 0 },
+            { category: "🎨 文学", question: "《骆驼祥子》的作者是谁？", options: ["老舍", "巴金", "茅盾", "鲁迅"], answer: 0 },
+            { category: "🎨 文学", question: "《围城》的作者是谁？", options: ["钱钟书", "杨绛", "张爱玲", "沈从文"], answer: 0 },
+            { category: "🎨 文学", question: "《边城》的作者是谁？", options: ["沈从文", "钱钟书", "张爱玲", "杨绛"], answer: 0 },
+            { category: "🎨 文学", question: "《倾城之恋》的作者是谁？", options: ["张爱玲", "沈从文", "钱钟书", "杨绛"], answer: 0 },
+            { category: "🎨 文学", question: "《我们仨》的作者是谁？", options: ["杨绛", "张爱玲", "沈从文", "钱钟书"], answer: 0 },
+            { category: "🎨 文学", question: "《白鹿原》的作者是谁？", options: ["陈忠实", "贾平凹", "莫言", "余华"], answer: 0 },
+            { category: "🎨 文学", question: "《活着》的作者是谁？", options: ["余华", "莫言", "陈忠实", "贾平凹"], answer: 0 },
+            { category: "🎨 文学", question: "《红高粱》的作者是谁？", options: ["莫言", "余华", "陈忠实", "贾平凹"], answer: 0 },
+            { category: "🎨 文学", question: "《废都》的作者是谁？", options: ["贾平凹", "莫言", "余华", "陈忠实"], answer: 0 },
+            { category: "🎨 文学", question: "《平凡的世界》的作者是谁？", options: ["路遥", "陈忠实", "贾平凹", "莫言"], answer: 0 },
+            { category: "🎨 文学", question: "《穆斯林的葬礼》的作者是谁？", options: ["霍达", "路遥", "陈忠实", "贾平凹"], answer: 0 },
+            { category: "🎨 文学", question: "《长恨歌》的作者是谁？", options: ["王安忆", "霍达", "路遥", "陈忠实"], answer: 0 },
+            { category: "🎨 文学", question: "《黄金时代》的作者是谁？", options: ["王小波", "王朔", "韩寒", "郭敬明"], answer: 0 },
+            { category: "🎨 文学", question: "《三重门》的作者是谁？", options: ["韩寒", "郭敬明", "王小波", "王朔"], answer: 0 },
+            
+            // 数学类 (201-220)
+            { category: "🧮 数学", question: "1+1等于多少？", options: ["2", "3", "4", "5"], answer: 0 },
+            { category: "🧮 数学", question: "2+2等于多少？", options: ["4", "5", "6", "7"], answer: 0 },
+            { category: "🧮 数学", question: "3+3等于多少？", options: ["6", "7", "8", "9"], answer: 0 },
+            { category: "🧮 数学", question: "4+4等于多少？", options: ["8", "9", "10", "11"], answer: 0 },
+            { category: "🧮 数学", question: "5+5等于多少？", options: ["10", "11", "12", "13"], answer: 0 },
+            { category: "🧮 数学", question: "6+6等于多少？", options: ["12", "13", "14", "15"], answer: 0 },
+            { category: "🧮 数学", question: "7+7等于多少？", options: ["14", "15", "16", "17"], answer: 0 },
+            { category: "🧮 数学", question: "8+8等于多少？", options: ["16", "17", "18", "19"], answer: 0 },
+            { category: "🧮 数学", question: "9+9等于多少？", options: ["18", "19", "20", "21"], answer: 0 },
+            { category: "🧮 数学", question: "10+10等于多少？", options: ["20", "21", "22", "23"], answer: 0 },
+            { category: "🧮 数学", question: "2×2等于多少？", options: ["4", "5", "6", "7"], answer: 0 },
+            { category: "🧮 数学", question: "3×3等于多少？", options: ["9", "8", "7", "6"], answer: 0 },
+            { category: "🧮 数学", question: "4×4等于多少？", options: ["16", "15", "14", "13"], answer: 0 },
+            { category: "🧮 数学", question: "5×5等于多少？", options: ["25", "24", "23", "22"], answer: 0 },
+            { category: "🧮 数学", question: "6×6等于多少？", options: ["36", "35", "34", "33"], answer: 0 },
+            { category: "🧮 数学", question: "7×7等于多少？", options: ["49", "48", "47", "46"], answer: 0 },
+            { category: "🧮 数学", question: "8×8等于多少？", options: ["64", "63", "62", "61"], answer: 0 },
+            { category: "🧮 数学", question: "9×9等于多少？", options: ["81", "80", "79", "78"], answer: 0 },
+            { category: "🧮 数学", question: "10×10等于多少？", options: ["100", "99", "98", "97"], answer: 0 },
+            { category: "🧮 数学", question: "圆周率π约等于多少？", options: ["3.14", "3.15", "3.16", "3.17"], answer: 0 },
+            
+            // 音乐类 (221-240)
+            { category: "🎵 音乐", question: "被称为“音乐神童”的作曲家是谁？", options: ["莫扎特", "贝多芬", "巴赫", "肖邦"], answer: 0 },
+            { category: "🎵 音乐", question: "贝多芬的第五交响曲叫什么？", options: ["命运", "英雄", "田园", "合唱"], answer: 0 },
+            { category: "🎵 音乐", question: "肖邦是哪个国家的作曲家？", options: ["波兰", "法国", "德国", "奥地利"], answer: 0 },
+            { category: "🎵 音乐", question: "巴赫是哪个国家的作曲家？", options: ["德国", "奥地利", "法国", "意大利"], answer: 0 },
+            { category: "🎵 音乐", question: "《蓝色多瑙河》的作者是谁？", options: ["小约翰·施特劳斯", "莫扎特", "贝多芬", "巴赫"], answer: 0 },
+            { category: "🎵 音乐", question: "《欢乐颂》出自哪部交响曲？", options: ["第九交响曲", "第五交响曲", "第三交响曲", "第六交响曲"], answer: 0 },
+            { category: "🎵 音乐", question: "《月光曲》的作者是谁？", options: ["贝多芬", "莫扎特", "肖邦", "巴赫"], answer: 0 },
+            { category: "🎵 音乐", question: "《四季》的作者是谁？", options: ["维瓦尔第", "巴赫", "亨德尔", "海顿"], answer: 0 },
+            { category: "🎵 音乐", question: "《卡农》的作者是谁？", options: ["帕赫贝尔", "巴赫", "亨德尔", "维瓦尔第"], answer: 0 },
+            { category: "🎵 音乐", question: "《图兰朵》的作者是谁？", options: ["普契尼", "威尔第", "罗西尼", "多尼采蒂"], answer: 0 },
+            { category: "🎵 音乐", question: "《茶花女》的作者是谁？", options: ["威尔第", "普契尼", "罗西尼", "多尼采蒂"], answer: 0 },
+            { category: "🎵 音乐", question: "《费加罗的婚礼》的作者是谁？", options: ["莫扎特", "罗西尼", "威尔第", "普契尼"], answer: 0 },
+            { category: "🎵 音乐", question: "《魔笛》的作者是谁？", options: ["莫扎特", "贝多芬", "海顿", "巴赫"], answer: 0 },
+            { category: "🎵 音乐", question: "《天鹅湖》的作者是谁？", options: ["柴可夫斯基", "斯特拉文斯基", "普罗科菲耶夫", "肖斯塔科维奇"], answer: 0 },
+            { category: "🎵 音乐", question: "《胡桃夹子》的作者是谁？", options: ["柴可夫斯基", "斯特拉文斯基", "普罗科菲耶夫", "肖斯塔科维奇"], answer: 0 },
+            { category: "🎵 音乐", question: "《彼得与狼》的作者是谁？", options: ["普罗科菲耶夫", "柴可夫斯基", "斯特拉文斯基", "肖斯塔科维奇"], answer: 0 },
+            { category: "🎵 音乐", question: "《火鸟》的作者是谁？", options: ["斯特拉文斯基", "柴可夫斯基", "普罗科菲耶夫", "肖斯塔科维奇"], answer: 0 },
+            { category: "🎵 音乐", question: "《沃尔塔瓦河》的作者是谁？", options: ["斯美塔那", "德沃夏克", "雅纳切克", "苏克"], answer: 0 },
+            { category: "🎵 音乐", question: "《自新大陆》的作者是谁？", options: ["德沃夏克", "斯美塔那", "雅纳切克", "苏克"], answer: 0 },
+            { category: "🎵 音乐", question: "《图画展览会》的作者是谁？", options: ["穆索尔斯基", "里姆斯基-科萨科夫", "鲍罗丁", "居伊"], answer: 0 },
+            
+            // 电影类 (241-260)
+            { category: "🎬 电影", question: "电影《泰坦尼克号》的导演是谁？", options: ["卡梅隆", "斯皮尔伯格", "诺兰", "张艺谋"], answer: 0 },
+            { category: "🎬 电影", question: "电影《阿凡达》的导演是谁？", options: ["卡梅隆", "斯皮尔伯格", "诺兰", "张艺谋"], answer: 0 },
+            { category: "🎬 电影", question: "电影《侏罗纪公园》的导演是谁？", options: ["斯皮尔伯格", "卡梅隆", "诺兰", "张艺谋"], answer: 0 },
+            { category: "🎬 电影", question: "电影《盗梦空间》的导演是谁？", options: ["诺兰", "斯皮尔伯格", "卡梅隆", "张艺谋"], answer: 0 },
+            { category: "🎬 电影", question: "电影《英雄》的导演是谁？", options: ["张艺谋", "陈凯歌", "冯小刚", "姜文"], answer: 0 },
+            { category: "🎬 电影", question: "电影《霸王别姬》的导演是谁？", options: ["陈凯歌", "张艺谋", "冯小刚", "姜文"], answer: 0 },
+            { category: "🎬 电影", question: "电影《甲方乙方》的导演是谁？", options: ["冯小刚", "张艺谋", "陈凯歌", "姜文"], answer: 0 },
+            { category: "🎬 电影", question: "电影《让子弹飞》的导演是谁？", options: ["姜文", "冯小刚", "张艺谋", "陈凯歌"], answer: 0 },
+            { category: "🎬 电影", question: "电影《卧虎藏龙》的导演是谁？", options: ["李安", "张艺谋", "陈凯歌", "冯小刚"], answer: 0 },
+            { category: "🎬 电影", question: "电影《色|戒》的导演是谁？", options: ["李安", "张艺谋", "陈凯歌", "冯小刚"], answer: 0 },
+            { category: "🎬 电影", question: "电影《功夫》的导演是谁？", options: ["周星驰", "李安", "张艺谋", "陈凯歌"], answer: 0 },
+            { category: "🎬 电影", question: "电影《大话西游》的导演是谁？", options: ["刘镇伟", "周星驰", "李安", "张艺谋"], answer: 0 },
+            { category: "🎬 电影", question: "电影《无间道》的导演是谁？", options: ["刘伟强", "杜琪峰", "王家卫", "徐克"], answer: 0 },
+            { category: "🎬 电影", question: "电影《重庆森林》的导演是谁？", options: ["王家卫", "杜琪峰", "刘伟强", "徐克"], answer: 0 },
+            { category: "🎬 电影", question: "电影《倩女幽魂》的导演是谁？", options: ["程小东", "徐克", "刘伟强", "杜琪峰"], answer: 0 },
+            { category: "🎬 电影", question: "电影《黄飞鸿》的导演是谁？", options: ["徐克", "程小东", "刘伟强", "杜琪峰"], answer: 0 },
+            { category: "🎬 电影", question: "电影《英雄本色》的导演是谁？", options: ["吴宇森", "徐克", "刘伟强", "杜琪峰"], answer: 0 },
+            { category: "🎬 电影", question: "电影《喋血双雄》的导演是谁？", options: ["吴宇森", "徐克", "刘伟强", "杜琪峰"], answer: 0 },
+            { category: "🎬 电影", question: "电影《枪火》的导演是谁？", options: ["杜琪峰", "吴宇森", "徐克", "刘伟强"], answer: 0 },
+            { category: "🎬 电影", question: "电影《暗战》的导演是谁？", options: ["杜琪峰", "吴宇森", "徐克", "刘伟强"], answer: 0 },
+            
+            // 体育类 (261-280)
+            { category: "🏀 体育", question: "篮球比赛每队上场几人？", options: ["5人", "4人", "6人", "7人"], answer: 0 },
+            { category: "🏀 体育", question: "足球比赛每队上场几人？", options: ["11人", "10人", "9人", "8人"], answer: 0 },
+            { category: "🏀 体育", question: "排球比赛每队上场几人？", options: ["6人", "5人", "7人", "8人"], answer: 0 },
+            { category: "🏀 体育", question: "乒乓球比赛每队上场几人？", options: ["1人或2人", "2人或3人", "3人或4人", "4人或5人"], answer: 0 },
+            { category: "🏀 体育", question: "羽毛球比赛每队上场几人？", options: ["1人或2人", "2人或3人", "3人或4人", "4人或5人"], answer: 0 },
+            { category: "🏀 体育", question: "网球比赛每队上场几人？", options: ["1人或2人", "2人或3人", "3人或4人", "4人或5人"], answer: 0 },
+            { category: "🏀 体育", question: "奥运会每几年举办一次？", options: ["4年", "2年", "3年", "5年"], answer: 0 },
+            { category: "🏀 体育", question: "世界杯每几年举办一次？", options: ["4年", "2年", "3年", "5年"], answer: 0 },
+            { category: "🏀 体育", question: "欧洲杯每几年举办一次？", options: ["4年", "2年", "3年", "5年"], answer: 0 },
+            { category: "🏀 体育", question: "亚洲杯每几年举办一次？", options: ["4年", "2年", "3年", "5年"], answer: 0 },
+            { category: "🏀 体育", question: "NBA有多少支球队？", options: ["30支", "28支", "32支", "26支"], answer: 0 },
+            { category: "🏀 体育", question: "CBA有多少支球队？", options: ["20支", "18支", "22支", "24支"], answer: 0 },
+            { category: "🏀 体育", question: "英超有多少支球队？", options: ["20支", "18支", "22支", "24支"], answer: 0 },
+            { category: "🏀 体育", question: "西甲有多少支球队？", options: ["20支", "18支", "22支", "24支"], answer: 0 },
+            { category: "🏀 体育", question: "意甲有多少支球队？", options: ["20支", "18支", "22支", "24支"], answer: 0 },
+            { category: "🏀 体育", question: "德甲有多少支球队？", options: ["18支", "20支", "22支", "24支"], answer: 0 },
+            { category: "🏀 体育", question: "法甲有多少支球队？", options: ["20支", "18支", "22支", "24支"], answer: 0 },
+            { category: "🏀 体育", question: "中超有多少支球队？", options: ["16支", "14支", "18支", "20支"], answer: 0 },
+            { category: "🏀 体育", question: "谁是NBA历史得分王？", options: ["贾巴尔", "乔丹", "科比", "詹姆斯"], answer: 0 },
+            { category: "🏀 体育", question: "谁是世界杯历史射手王？", options: ["克洛泽", "罗纳尔多", "盖德穆勒", "方丹"], answer: 0 },
+            
+            // 科技类 (281-300)
+            { category: "💻 科技", question: "互联网的发明者之一是谁？", options: ["蒂姆·伯纳斯-李", "比尔盖茨", "乔布斯", "扎克伯格"], answer: 0 },
+            { category: "💻 科技", question: "微软的创始人是谁？", options: ["比尔盖茨", "乔布斯", "扎克伯格", "贝索斯"], answer: 0 },
+            { category: "💻 科技", question: "苹果公司的创始人是谁？", options: ["乔布斯", "比尔盖茨", "扎克伯格", "贝索斯"], answer: 0 },
+            { category: "💻 科技", question: "亚马逊的创始人是谁？", options: ["贝索斯", "比尔盖茨", "乔布斯", "扎克伯格"], answer: 0 },
+            { category: "💻 科技", question: "Facebook的创始人是谁？", options: ["扎克伯格", "比尔盖茨", "乔布斯", "贝索斯"], answer: 0 },
+            { category: "💻 科技", question: "Google的创始人是谁？", options: ["拉里佩奇和谢尔盖布林", "比尔盖茨", "乔布斯", "扎克伯格"], answer: 0 },
+            { category: "💻 科技", question: "特斯拉的创始人是谁？", options: ["马斯克", "爱迪生", "特斯拉", "福特"], answer: 0 },
+            { category: "💻 科技", question: "阿里巴巴的创始人是谁？", options: ["马云", "马化腾", "李彦宏", "刘强东"], answer: 0 },
+            { category: "💻 科技", question: "腾讯的创始人是谁？", options: ["马化腾", "马云", "李彦宏", "刘强东"], answer: 0 },
+            { category: "💻 科技", question: "百度的创始人是谁？", options: ["李彦宏", "马云", "马化腾", "刘强东"], answer: 0 },
+            { category: "💻 科技", question: "京东的创始人是谁？", options: ["刘强东", "马云", "马化腾", "李彦宏"], answer: 0 },
+            { category: "💻 科技", question: "Windows操作系统是谁开发的？", options: ["微软", "苹果", "谷歌", "IBM"], answer: 0 },
+            { category: "💻 科技", question: "iOS操作系统是谁开发的？", options: ["苹果", "微软", "谷歌", "IBM"], answer: 0 },
+            { category: "💻 科技", question: "Android操作系统是谁开发的？", options: ["谷歌", "苹果", "微软", "IBM"], answer: 0 },
+            { category: "💻 科技", question: "Linux操作系统是谁开发的？", options: ["林纳斯", "比尔盖茨", "乔布斯", "扎克伯格"], answer: 0 },
+            { category: "💻 科技", question: "Python语言是谁创建的？", options: ["吉多·范罗苏姆", "丹尼斯里奇", "比雅尼斯特劳斯特鲁普", "詹姆斯高斯林"], answer: 0 },
+            { category: "💻 科技", question: "Java语言是谁创建的？", options: ["詹姆斯高斯林", "吉多·范罗苏姆", "丹尼斯里奇", "比雅尼斯特劳斯特鲁普"], answer: 0 },
+            { category: "💻 科技", question: "C语言是谁创建的？", options: ["丹尼斯里奇", "吉多·范罗苏姆", "比雅尼斯特劳斯特鲁普", "詹姆斯高斯林"], answer: 0 },
+            { category: "💻 科技", question: "C++语言是谁创建的？", options: ["比雅尼斯特劳斯特鲁普", "丹尼斯里奇", "吉多·范罗苏姆", "詹姆斯高斯林"], answer: 0 },
+            { category: "💻 科技", question: "JavaScript语言是谁创建的？", options: ["布兰登艾奇", "丹尼斯里奇", "吉多·范罗苏姆", "詹姆斯高斯林"], answer: 0 },
+            
+            // 扩展更多题目 (301-350)
+            { category: "🎓 常识", question: "人体最大的器官是什么？", options: ["皮肤", "肝脏", "心脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最小的骨头是什么？", options: ["镫骨", "锤骨", "砧骨", "舌骨"], answer: 0 },
+            { category: "🎓 常识", question: "人体最长的骨头是什么？", options: ["股骨", "胫骨", "腓骨", "肱骨"], answer: 0 },
+            { category: "🎓 常识", question: "人体最强的肌肉是什么？", options: ["咬肌", "心脏", "舌肌", "臀肌"], answer: 0 },
+            { category: "🎓 常识", question: "人体最硬的物质是什么？", options: ["牙釉质", "骨骼", "指甲", "头发"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的动脉是什么？", options: ["主动脉", "颈动脉", "股动脉", "肺动脉"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的静脉是什么？", options: ["下腔静脉", "上腔静脉", "门静脉", "股静脉"], answer: 0 },
+            { category: "🎓 常识", question: "人体最长的神经是什么？", options: ["坐骨神经", "迷走神经", "视神经", "听神经"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的淋巴器官是什么？", options: ["脾脏", "扁桃体", "胸腺", "淋巴结"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的内分泌腺是什么？", options: ["甲状腺", "垂体", "肾上腺", "松果体"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的消化腺是什么？", options: ["肝脏", "胰腺", "唾液腺", "胃腺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的呼吸器官是什么？", options: ["肺", "气管", "支气管", "鼻腔"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的泌尿器官是什么？", options: ["肾脏", "膀胱", "输尿管", "尿道"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的生殖器官是什么？", options: ["睾丸/卵巢", "阴茎/子宫", "输精管/输卵管", "精囊/阴道"], answer: 0 },
+            { category: "🎓 常识", question: "人体最大的感觉器官是什么？", options: ["皮肤", "眼睛", "耳朵", "鼻子"], answer: 0 },
+            { category: "🎓 常识", question: "人体最长的感觉器官是什么？", options: ["皮肤", "眼睛", "耳朵", "鼻子"], answer: 0 },
+            { category: "🎓 常识", question: "人体最复杂的器官是什么？", options: ["大脑", "心脏", "肝脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最重要的器官是什么？", options: ["大脑", "心脏", "肝脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最神秘的器官是什么？", options: ["大脑", "心脏", "肝脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最神奇的器官是什么？", options: ["大脑", "心脏", "肝脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最脆弱的器官是什么？", options: ["大脑", "心脏", "肝脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最强大的器官是什么？", options: ["肝脏", "大脑", "心脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最耐用的器官是什么？", options: ["肝脏", "大脑", "心脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最勤劳的器官是什么？", options: ["心脏", "肝脏", "大脑", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最聪明的器官是什么？", options: ["大脑", "心脏", "肝脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最忠诚的器官是什么？", options: ["心脏", "大脑", "肝脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最善良的器官是什么？", options: ["肝脏", "大脑", "心脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最邪恶的器官是什么？", options: ["大脑", "心脏", "肝脏", "肺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最神秘的器官是什么？", options: ["松果体", "大脑", "心脏", "肝脏"], answer: 0 },
+            { category: "🎓 常识", question: "人体最神奇的腺体是什么？", options: ["松果体", "垂体", "甲状腺", "肾上腺"], answer: 0 },
+            { category: "🎓 常识", question: "人体最重要的激素是什么？", options: ["胰岛素", "肾上腺素", "甲状腺素", "生长激素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最强大的激素是什么？", options: ["肾上腺素", "胰岛素", "甲状腺素", "生长激素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最甜蜜的激素是什么？", options: ["胰岛素", "肾上腺素", "甲状腺素", "生长激素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最危险的激素是什么？", options: ["肾上腺素", "胰岛素", "甲状腺素", "生长激素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最幸福的激素是什么？", options: ["多巴胺", "肾上腺素", "胰岛素", "甲状腺素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最快乐的激素是什么？", options: ["内啡肽", "多巴胺", "肾上腺素", "胰岛素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最浪漫的激素是什么？", options: ["催产素", "多巴胺", "肾上腺素", "内啡肽"], answer: 0 },
+            { category: "🎓 常识", question: "人体最疯狂的激素是什么？", options: ["肾上腺素", "多巴胺", "内啡肽", "催产素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最温柔的激素是什么？", options: ["催产素", "多巴胺", "内啡肽", "肾上腺素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最勇敢的激素是什么？", options: ["肾上腺素", "多巴胺", "内啡肽", "催产素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最聪明的激素是什么？", options: ["多巴胺", "肾上腺素", "内啡肽", "催产素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最愚蠢的激素是什么？", options: ["皮质醇", "多巴胺", "肾上腺素", "内啡肽"], answer: 0 },
+            { category: "🎓 常识", question: "人体最美丽的激素是什么？", options: ["雌激素", "睾酮", "孕激素", "催产素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最帅气的激素是什么？", options: ["睾酮", "雌激素", "孕激素", "催产素"], answer: 0 },
+            { category: "🎓 常识", question: "人体最伟大的激素是什么？", options: ["胰岛素", "肾上腺素", "甲状腺素", "生长激素"], answer: 0 }
+        ];
+
+        // 随机打乱选项的函数
+        function shuffleOptions(question) {
+            // 创建选项数组，每个选项带原始索引
+            let optionsWithIndex = question.options.map((opt, idx) => ({
+                text: opt,
+                originalIndex: idx
+            }));
+            
+            // 随机打乱
+            for (let i = optionsWithIndex.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
+            }
+            
+            // 找出正确答案的新位置
+            let newAnswerIndex = optionsWithIndex.findIndex(opt => opt.originalIndex === question.answer);
+            
+            // 返回新的选项和答案索引
+            return {
+                ...question,
+                options: optionsWithIndex.map(opt => opt.text),
+                answer: newAnswerIndex
+            };
+        }
+
+        // 获取随机打乱选项的题目
+        function getShuffledQuestions(count) {
+            // 先随机选择题目
+            let shuffled = [...rawQuizQuestions].sort(() => Math.random() - 0.5).slice(0, count);
+            // 再对每道题的选项进行随机打乱
+            return shuffled.map(q => shuffleOptions(q));
+        }
+
+        let currentQuizQuestions = [];
+        let currentQuestionIndex = 0;
+        let quizScore = 0;
+        let quizTimer = null;
+        let quizTimeLeft = 30;
+        let quizActive = false;
+        let quizCost = 7;
+
+        // 初始化
+        if (!localStorage.getItem('cards')) {
+            localStorage.setItem('cards', '[]');
+            localStorage.setItem('nextId', '1');
+        }
+        if (!localStorage.getItem('points')) {
+            localStorage.setItem('points', '{}');
+        }
+        if (!localStorage.getItem('achievements')) {
+            localStorage.setItem('achievements', '{}');
+        }
+        if (!localStorage.getItem('dailyBonus')) {
+            localStorage.setItem('dailyBonus', '{}');
+        }
+        if (!localStorage.getItem('gameStats')) {
+            localStorage.setItem('gameStats', '{}');
+        }
+
+        // 生成带格式的卡号
+        function generateFormattedCardNo() {
+            let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let groups = [];
+            
+            for (let g = 0; g < 4; g++) {
+                let group = '';
+                for (let i = 0; i < 4; i++) {
+                    group += chars[Math.floor(Math.random() * chars.length)];
+                }
+                groups.push(group);
+            }
+            
+            return groups.join('-');
+        }
+
+        // 格式化卡号
+        function formatCardNo(no) {
+            if (no.includes('-')) return no;
+            if (no.length >= 16) {
+                return no.substring(0,4) + '-' + no.substring(4,8) + '-' + no.substring(8,12) + '-' + no.substring(12,16);
+            }
+            return no;
+        }
+
+        // 获取到期时间（带时分秒）
+        function getExpireTime(days) {
+            if (days <= 0) return '永不过期';
+            let d = new Date();
+            d.setDate(d.getDate() + days);
+            return d.getFullYear() + '-' + 
+                   (d.getMonth()+1).toString().padStart(2,'0') + '-' + 
+                   d.getDate().toString().padStart(2,'0') + ' 23:59:59';
+        }
+
+        // 获取用户积分
+        function getUserPoints(cardNo) {
+            let points = JSON.parse(localStorage.getItem('points')) || {};
+            return points[cardNo] || 100;
+        }
+
+        // 更新用户积分
+        function updateUserPoints(cardNo, change) {
+            let points = JSON.parse(localStorage.getItem('points')) || {};
+            let current = points[cardNo] || 100;
+            current += change;
+            if (current < 0) current = 0;
+            points[cardNo] = current;
+            localStorage.setItem('points', JSON.stringify(points));
+            return current;
+        }
+
+        // 获取游戏统计
+        function getGameStats(cardNo) {
+            let all = JSON.parse(localStorage.getItem('gameStats')) || {};
+            return all[cardNo] || { played: 0, wins: 0, history: [] };
+        }
+
+        // 更新游戏统计
+        function updateGameStats(cardNo, isWin) {
+            let all = JSON.parse(localStorage.getItem('gameStats')) || {};
+            if (!all[cardNo]) {
+                all[cardNo] = { played: 0, wins: 0, history: [] };
+            }
+            all[cardNo].played++;
+            if (isWin) all[cardNo].wins++;
+            
+            all[cardNo].history.unshift({
+                time: new Date().toLocaleTimeString(),
+                win: isWin
+            });
+            if (all[cardNo].history.length > 10) all[cardNo].history.pop();
+            
+            localStorage.setItem('gameStats', JSON.stringify(all));
+            return all[cardNo];
+        }
+
+        // 显示游戏统计
+        function showGameStats() {
+            if (!currentUserCard) return;
+            let stats = getGameStats(currentUserCard.cardNo);
+            
+            document.getElementById('totalPlayed').innerText = stats.played;
+            document.getElementById('totalWins').innerText = stats.wins;
+            let rate = stats.played > 0 ? Math.round((stats.wins / stats.played) * 100) : 0;
+            document.getElementById('winRate').innerText = rate + '%';
+            
+            let historyHtml = '';
+            if (stats.history.length == 0) {
+                historyHtml = '<div class="history-item">暂无游戏记录</div>';
+            } else {
+                stats.history.forEach(h => {
+                    historyHtml += `<div class="history-item ${h.win ? 'win' : 'lose'}">${h.time} - ${h.win ? '✅ 胜利' : '❌ 失败'}</div>`;
+                });
+            }
+            document.getElementById('gameHistory').innerHTML = historyHtml;
+        }
+
+        // 获取成就
+        function getUserAchievements(cardNo) {
+            let all = JSON.parse(localStorage.getItem('achievements')) || {};
+            return all[cardNo] || {
+                firstWin: false,
+                lucky: false,
+                rich: false,
+                master: false,
+                daily: false,
+                lucky7: false,
+                bigWinner: false,
+                quizMaster: false,
+                quizGenius: false
+            };
+        }
+
+        // 更新成就
+        function updateAchievement(cardNo, name) {
+            let all = JSON.parse(localStorage.getItem('achievements')) || {};
+            if (!all[cardNo]) {
+                all[cardNo] = {
+                    firstWin: false,
+                    lucky: false,
+                    rich: false,
+                    master: false,
+                    daily: false,
+                    lucky7: false,
+                    bigWinner: false,
+                    quizMaster: false,
+                    quizGenius: false
+                };
+            }
+            all[cardNo][name] = true;
+            localStorage.setItem('achievements', JSON.stringify(all));
+        }
+
+        // 显示成就
+        function showAchievements() {
+            if (!currentUserCard) return;
+            
+            let userAchievements = getUserAchievements(currentUserCard.cardNo);
+            let html = '';
+            
+            let achievementsList = [
+                { key: 'firstWin', name: '首战告捷', icon: '🏆', desc: '第一次赢得游戏' },
+                { key: 'lucky', name: '幸运儿', icon: '🍀', desc: '单次赢得30+积分' },
+                { key: 'rich', name: '大富翁', icon: '💰', desc: '累计获得100积分' },
+                { key: 'master', name: '游戏大师', icon: '👑', desc: '玩遍所有游戏' },
+                { key: 'daily', name: '坚持不懈', icon: '📅', desc: '连续签到3天' },
+                { key: 'lucky7', name: '幸运7', icon: '7️⃣', desc: '掷出6点' },
+                { key: 'bigWinner', name: '大奖得主', icon: '🎰', desc: '单次赢50+积分' },
+                { key: 'quizMaster', name: '答题王', icon: '❓', desc: '答对10题' },
+                { key: 'quizGenius', name: '答题天才', icon: '🧠', desc: '答对20题' }
+            ];
+            
+            achievementsList.forEach(ach => {
+                let unlocked = userAchievements[ach.key];
+                html += `
+                    <div class="achievement-card ${unlocked ? 'unlocked' : ''}">
+                        <div class="achievement-icon">${ach.icon}</div>
+                        <div class="achievement-name">${ach.name}</div>
+                        <div style="font-size: 10px;">${ach.desc}</div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('achievementsList').innerHTML = html;
+        }
+
+        // 检查成就
+        function checkAchievements(game, win, cost) {
+            if (!currentUserCard) return;
+            
+            let userAchievements = getUserAchievements(currentUserCard.cardNo);
+            let points = getUserPoints(currentUserCard.cardNo);
+            
+            if (!userAchievements.firstWin && win > cost) {
+                updateAchievement(currentUserCard.cardNo, 'firstWin');
+                showResult('success', '🏆 解锁成就：首战告捷');
+            }
+            
+            if (!userAchievements.lucky && win - cost >= 30) {
+                updateAchievement(currentUserCard.cardNo, 'lucky');
+                showResult('success', '🍀 解锁成就：幸运儿');
+            }
+            
+            if (!userAchievements.rich && points >= 200) {
+                updateAchievement(currentUserCard.cardNo, 'rich');
+                showResult('success', '💰 解锁成就：大富翁');
+            }
+            
+            if (!userAchievements.bigWinner && win >= 50) {
+                updateAchievement(currentUserCard.cardNo, 'bigWinner');
+                showResult('success', '🎰 解锁成就：大奖得主');
+            }
+            
+            if (!userAchievements.quizMaster && game == 'quiz' && win >= 100) {
+                updateAchievement(currentUserCard.cardNo, 'quizMaster');
+                showResult('success', '❓ 解锁成就：答题王');
+            }
+            
+            if (!userAchievements.quizGenius && game == 'quiz' && win >= 200) {
+                updateAchievement(currentUserCard.cardNo, 'quizGenius');
+                showResult('success', '🧠 解锁成就：答题天才');
+            }
+            
+            showAchievements();
+        }
+
+        // 领取每日福利
+        function claimDailyBonus() {
+            if (!currentUserCard) return;
+            
+            let daily = JSON.parse(localStorage.getItem('dailyBonus')) || {};
+            let today = new Date().toDateString();
+            let lastClaim = daily[currentUserCard.cardNo];
+            
+            if (lastClaim == today) {
+                showResult('error', '❌ 今天已经领过了');
+                return;
+            }
+            
+            daily[currentUserCard.cardNo] = today;
+            localStorage.setItem('dailyBonus', JSON.stringify(daily));
+            
+            let points = updateUserPoints(currentUserCard.cardNo, 20);
+            document.getElementById('userPoints').innerText = points;
+            
+            showResult('success', '✅ 领取成功！获得20积分');
+        }
+
+        function encrypt(text) {
+            let result = '';
+            for (let i = 0; i < text.length; i++) {
+                let charCode = text.charCodeAt(i);
+                let keyChar = ENCRYPT_KEY.charCodeAt(i % ENCRYPT_KEY.length);
+                result += (charCode ^ keyChar).toString(16).padStart(4, '0');
+            }
+            return btoa(result);
+        }
+
+        function decrypt(encryptedText) {
+            try {
+                let hex = atob(encryptedText);
+                let result = '';
+                for (let i = 0; i < hex.length; i += 4) {
+                    let charCode = parseInt(hex.substr(i, 4), 16);
+                    let keyChar = ENCRYPT_KEY.charCodeAt((i/4) % ENCRYPT_KEY.length);
+                    result += String.fromCharCode(charCode ^ keyChar);
+                }
+                return result;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function getTime() {
+            let d = new Date();
+            return d.getFullYear() + '-' + 
+                   (d.getMonth()+1).toString().padStart(2,'0') + '-' + 
+                   d.getDate().toString().padStart(2,'0') + ' ' + 
+                   d.getHours().toString().padStart(2,'0') + ':' + 
+                   d.getMinutes().toString().padStart(2,'0') + ':' + 
+                   d.getSeconds().toString().padStart(2,'0');
+        }
+
+        function showTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('verifyPage').style.display = 'none';
+            document.getElementById('mycardsPage').style.display = 'none';
+            document.getElementById('gamesPage').style.display = 'none';
+            document.getElementById('adminPage').style.display = 'none';
+            
+            if (tab == 'verify') {
+                document.querySelectorAll('.tab')[0].classList.add('active');
+                document.getElementById('verifyPage').style.display = 'block';
+                document.getElementById('cardNoInput').value = '';
+                hideResult();
+            } else if (tab == 'mycards') {
+                document.querySelectorAll('.tab')[1].classList.add('active');
+                document.getElementById('mycardsPage').style.display = 'block';
+                checkLoginStatus();
+            }
+        }
+
+        function hideResult() {
+            let result = document.getElementById('result');
+            result.style.display = 'none';
+            if (timeoutId) clearTimeout(timeoutId);
+        }
+
+        function showResult(type, message) {
+            let result = document.getElementById('result');
+            document.getElementById('resultMessage').innerHTML = message;
+            result.className = 'result ' + type;
+            result.style.display = 'block';
+            timeoutId = setTimeout(hideResult, 3000);
+        }
+
+        function showGameResult(message, isWin = true) {
+            let gameResult = document.getElementById('gameResult');
+            gameResult.innerHTML = message;
+            gameResult.className = 'game-result ' + (isWin ? 'win' : 'lose');
+            gameResult.style.display = 'block';
+            
+            gameResult.style.animation = 'none';
+            gameResult.offsetHeight;
+            gameResult.style.animation = 'resultSlide 0.4s ease-out';
+            
+            setTimeout(() => {
+                gameResult.style.display = 'none';
+            }, 3000);
+        }
+
+        // 开始冷却（5秒）
+        function startCooldown() {
+            cooldownActive = true;
+            cooldownSeconds = 5;
+            
+            document.querySelectorAll('.game-card').forEach(card => {
+                card.classList.add('disabled');
+            });
+            
+            let cooldownMsg = document.getElementById('cooldownMessage');
+            let cooldownSec = document.getElementById('cooldownSeconds');
+            cooldownMsg.style.display = 'block';
+            
+            if (cooldownTimer) clearInterval(cooldownTimer);
+            cooldownTimer = setInterval(() => {
+                cooldownSeconds--;
+                cooldownSec.innerText = cooldownSeconds;
+                
+                if (cooldownSeconds <= 0) {
+                    clearInterval(cooldownTimer);
+                    cooldownActive = false;
+                    cooldownMsg.style.display = 'none';
+                    
+                    document.querySelectorAll('.game-card').forEach(card => {
+                        card.classList.remove('disabled');
+                    });
+                }
+            }, 1000);
+        }
+
+        // 处理卡号输入
+        function handleCardInput() {
+            let input = document.getElementById('cardNoInput').value.trim().toUpperCase();
+            
+            if (input == ADMIN_SECRET) {
+                document.getElementById('verifyPage').style.display = 'none';
+                document.getElementById('mycardsPage').style.display = 'none';
+                document.getElementById('gamesPage').style.display = 'none';
+                document.getElementById('adminPage').style.display = 'block';
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                
+                updateExpiredStatus();
+                showCards();
+                updateStats();
+                return;
+            }
+            
+            if (!input) {
+                showResult('error', '❌ 请输入卡号');
+                return;
+            }
+            
+            let cards = JSON.parse(localStorage.getItem('cards')) || [];
+            let card = cards.find(c => c.cardNo == input);
+            
+            if (!card) {
+                showResult('error', '❌ 卡号不存在');
+                return;
+            }
+            
+            if (card.status == CARD_STATUS.USED) {
+                showResult('error', '❌ 卡密已使用');
+                return;
+            }
+            
+            if (card.status == CARD_STATUS.BANNED) {
+                showResult('error', '❌ 卡密已被封禁');
+                return;
+            }
+            
+            if (card.status == CARD_STATUS.EXPIRED) {
+                showResult('error', '❌ 卡密已过期');
+                return;
+            }
+            
+            if (card.status == CARD_STATUS.USING) {
+                showResult('error', '❌ 卡密正在使用中');
+                return;
+            }
+            
+            if (card.expireTime && card.expireTime != '永不过期') {
+                if (new Date(card.expireTime) < new Date()) {
+                    card.status = CARD_STATUS.EXPIRED;
+                    localStorage.setItem('cards', JSON.stringify(cards));
+                    showResult('error', '❌ 卡密已过期');
+                    return;
+                }
+            }
+            
+            card.status = CARD_STATUS.USING;
+            card.loginTime = getTime();
+            localStorage.setItem('cards', JSON.stringify(cards));
+            
+            currentUserCard = card;
+            
+            showResult('success', '✅ 登录成功！');
+            
+            setTimeout(() => {
+                showTab('mycards');
+            }, 1000);
+        }
+
+        // 退出登录
+        function logout() {
+            if (currentUserCard) {
+                let cards = JSON.parse(localStorage.getItem('cards')) || [];
+                let card = cards.find(c => c.id == currentUserCard.id);
+                
+                if (card && card.status == CARD_STATUS.USING) {
+                    card.status = CARD_STATUS.UNUSED;
+                    delete card.loginTime;
+                    localStorage.setItem('cards', JSON.stringify(cards));
+                }
+                
+                currentUserCard = null;
+                
+                showResult('success', '✅ 已退出登录');
+            }
+            
+            checkLoginStatus();
+            showTab('verify');
+        }
+
+        // 检查登录状态
+        function checkLoginStatus() {
+            let loginOverlay = document.getElementById('loginOverlay');
+            let cardContent = document.getElementById('cardContent');
+            let userLoginStatus = document.getElementById('userLoginStatus');
+            let userPointsSpan = document.getElementById('userPoints');
+            
+            if (currentUserCard) {
+                loginOverlay.style.display = 'none';
+                cardContent.style.display = 'block';
+                userLoginStatus.innerHTML = `👋 欢迎，${formatCardNo(currentUserCard.cardNo)} <span class="using-tag">使用中</span>`;
+                
+                userPoints = getUserPoints(currentUserCard.cardNo);
+                userPointsSpan.innerText = userPoints;
+                
+                showMyCards();
+            } else {
+                loginOverlay.style.display = 'flex';
+                cardContent.style.display = 'none';
+                userLoginStatus.innerHTML = '';
+            }
+        }
+
+        // 显示我的卡密
+        function showMyCards() {
+            if (!currentUserCard) return;
+            
+            let cards = JSON.parse(localStorage.getItem('cards')) || [];
+            let filter = document.getElementById('statusMyFilter').value;
+            let search = document.getElementById('searchMyCard').value.toLowerCase();
+            
+            let userCards = cards.filter(c => c.cardNo == currentUserCard.cardNo);
+            
+            let filtered = userCards.filter(c => {
+                if (filter != 'all' && c.status != filter) return false;
+                if (search && !c.cardNo.toLowerCase().includes(search)) return false;
+                return true;
+            });
+            
+            if (filtered.length == 0) {
+                document.getElementById('myCardList').innerHTML = '<div style="text-align:center; padding:20px; color:rgba(255,255,255,0.8);">暂无卡密</div>';
+                return;
+            }
+            
+            let html = '';
+            filtered.forEach(card => {
+                let statusText = card.status == 0 ? '未使用' : 
+                                card.status == 1 ? '已使用' : 
+                                card.status == 3 ? '已过期' : '使用中';
+                
+                html += `
+                    <div class="card-item ${card.status == CARD_STATUS.USING ? 'using' : card.status == CARD_STATUS.USED ? 'used' : card.status == CARD_STATUS.EXPIRED ? 'expired' : ''}">
+                        <div class="card-row">
+                            <span class="card-no">${formatCardNo(card.cardNo)}</span>
+                            <span class="value-tag">💰 ${card.value}元</span>
+                        </div>
+                        
+                        <div class="info-line">
+                            <span class="info-label">📅 到期</span>
+                            <span class="info-value expire-time">${card.expireTime || '永不过期'}</span>
+                        </div>
+                        
+                        <div class="info-line">
+                            <span class="info-label">🕐 生成</span>
+                            <span class="info-value create-time">${card.createTime}</span>
+                        </div>
+                        
+                        ${card.loginTime ? `<div style="font-size: 13px; margin-top: 8px;">⏰ 登录时间：${card.loginTime}</div>` : ''}
+                        ${card.usedTime ? `<div style="font-size: 13px; margin-top: 8px;">✅ 使用时间：${card.usedTime}</div>` : ''}
+                    </div>
+                `;
+            });
+            
+            document.getElementById('myCardList').innerHTML = html;
+        }
+
+        // 显示游戏页面
+        function showGames() {
+            if (!currentUserCard) return;
+            
+            let gamesPage = document.getElementById('gamesPage');
+            gamesPage.style.display = 'block';
+            gamesPage.classList.remove('enter-animation');
+            void gamesPage.offsetWidth;
+            gamesPage.classList.add('enter-animation');
+            
+            document.getElementById('mycardsPage').style.display = 'none';
+            document.getElementById('minesweeperArea').style.display = 'none';
+            document.getElementById('quizArea').style.display = 'none';
+            
+            let points = getUserPoints(currentUserCard.cardNo);
+            document.getElementById('gamesPoints').innerText = points + ' 积分';
+            document.getElementById('gamesPointsDisplay').innerText = points;
+            
+            showAchievements();
+            showGameStats();
+            
+            if (cooldownTimer) {
+                clearInterval(cooldownTimer);
+                cooldownActive = false;
+                document.getElementById('cooldownMessage').style.display = 'none';
+                document.querySelectorAll('.game-card').forEach(card => {
+                    card.classList.remove('disabled');
+                });
+            }
+        }
+
+        // 显示扫雷游戏
+        function showMinesweeper() {
+            document.getElementById('minesweeperArea').style.display = 'block';
+            document.getElementById('quizArea').style.display = 'none';
+            initMinesweeper();
+        }
+
+        // 显示问答游戏
+        function showQuiz() {
+            if (!currentUserCard) return;
+            
+            let points = getUserPoints(currentUserCard.cardNo);
+            if (points < quizCost) {
+                showGameResult('❌ 积分不足！需要 ' + quizCost + ' 积分', false);
+                return;
+            }
+            
+            document.getElementById('minesweeperArea').style.display = 'none';
+            document.getElementById('quizArea').style.display = 'block';
+            
+            // 随机选择10道题，并打乱每道题的选项
+            currentQuizQuestions = getShuffledQuestions(10);
+            currentQuestionIndex = 0;
+            quizScore = 0;
+            quizActive = true;
+            
+            updateQuizDisplay();
+        }
+
+        // 更新问答显示
+        function updateQuizDisplay() {
+            if (!quizActive || currentQuestionIndex >= currentQuizQuestions.length) {
+                endQuiz();
+                return;
+            }
+            
+            let question = currentQuizQuestions[currentQuestionIndex];
+            document.getElementById('quizCategory').innerText = question.category;
+            document.getElementById('quizQuestion').innerText = question.question;
+            document.getElementById('quizScore').innerText = `得分: ${quizScore}/${currentQuizQuestions.length}`;
+            
+            let optionsHtml = '';
+            question.options.forEach((opt, index) => {
+                optionsHtml += `<div class="option-btn" onclick="selectQuizAnswer(${index})">${String.fromCharCode(65 + index)}. ${opt}</div>`;
+            });
+            document.getElementById('quizOptions').innerHTML = optionsHtml;
+            document.getElementById('nextQuestionBtn').style.display = 'none';
+            
+            // 开始计时
+            quizTimeLeft = 30;
+            document.getElementById('quizTimer').innerText = `⏱️ ${quizTimeLeft}s`;
+            
+            if (quizTimer) clearInterval(quizTimer);
+            quizTimer = setInterval(() => {
+                quizTimeLeft--;
+                document.getElementById('quizTimer').innerText = `⏱️ ${quizTimeLeft}s`;
+                
+                if (quizTimeLeft <= 0) {
+                    clearInterval(quizTimer);
+                    handleQuizTimeout();
+                }
+            }, 1000);
+        }
+
+        // 选择答案
+        function selectQuizAnswer(index) {
+            if (!quizActive) return;
+            
+            clearInterval(quizTimer);
+            
+            let question = currentQuizQuestions[currentQuestionIndex];
+            let options = document.querySelectorAll('.option-btn');
+            
+            options.forEach((opt, i) => {
+                opt.style.pointerEvents = 'none';
+                if (i == question.answer) {
+                    opt.classList.add('correct');
+                } else if (i == index && i != question.answer) {
+                    opt.classList.add('wrong');
+                }
+            });
+            
+            if (index == question.answer) {
+                quizScore++;
+                showGameResult('✅ 答对了！', true);
+            } else {
+                showGameResult('❌ 答错了', false);
+            }
+            
+            document.getElementById('nextQuestionBtn').style.display = 'block';
+        }
+
+        // 处理超时
+        function handleQuizTimeout() {
+            if (!quizActive) return;
+            
+            let options = document.querySelectorAll('.option-btn');
+            options.forEach(opt => {
+                opt.style.pointerEvents = 'none';
+            });
+            
+            let question = currentQuizQuestions[currentQuestionIndex];
+            options[question.answer].classList.add('correct');
+            
+            showGameResult('⏱️ 时间到！', false);
+            document.getElementById('nextQuestionBtn').style.display = 'block';
+        }
+
+        // 下一题
+        function nextQuizQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < currentQuizQuestions.length) {
+                updateQuizDisplay();
+            } else {
+                endQuiz();
+            }
+        }
+
+        // 结束问答
+        function endQuiz() {
+            quizActive = false;
+            clearInterval(quizTimer);
+            
+            let totalWin = quizScore * 10; // 每题10积分
+            let points = getUserPoints(currentUserCard.cardNo);
+            points = updateUserPoints(currentUserCard.cardNo, totalWin - quizCost);
+            updatePointsDisplay(points);
+            
+            let message = `📊 答题结束！\n正确: ${quizScore}/${currentQuizQuestions.length}\n获得: ${totalWin} 积分\n成本: ${quizCost} 积分\n净赚: ${totalWin - quizCost} 积分`;
+            
+            showGameResult(message, totalWin > quizCost);
+            updateGameStats(currentUserCard.cardNo, totalWin > quizCost);
+            checkAchievements('quiz', totalWin, quizCost);
+            
+            document.getElementById('quizArea').style.display = 'none';
+            startCooldown();
+        }
+
+        // 初始化扫雷
+        function initMinesweeper() {
+            mineGrid = [];
+            mineRevealed = [];
+            mineFlagged = [];
+            mineGameActive = false;
+            mineFirstClick = true;
+            
+            for (let i = 0; i < mineRows; i++) {
+                mineGrid[i] = [];
+                mineRevealed[i] = [];
+                mineFlagged[i] = [];
+                for (let j = 0; j < mineCols; j++) {
+                    mineGrid[i][j] = 0;
+                    mineRevealed[i][j] = false;
+                    mineFlagged[i][j] = false;
+                }
+            }
+            
+            updateMinesweeperGrid();
+            document.getElementById('mineCounter').innerHTML = '💣 ' + mineTotalMines;
+            document.getElementById('startMineBtn').disabled = false;
+        }
+
+        // 放置地雷
+        function placeMines(firstRow, firstCol) {
+            let mines = 0;
+            while (mines < mineTotalMines) {
+                let row = Math.floor(Math.random() * mineRows);
+                let col = Math.floor(Math.random() * mineCols);
+                
+                if (Math.abs(row - firstRow) <= 1 && Math.abs(col - firstCol) <= 1) continue;
+                
+                if (mineGrid[row][col] != -1) {
+                    mineGrid[row][col] = -1;
+                    mines++;
+                }
+            }
+            
+            for (let i = 0; i < mineRows; i++) {
+                for (let j = 0; j < mineCols; j++) {
+                    if (mineGrid[i][j] == -1) continue;
+                    
+                    let count = 0;
+                    for (let di = -1; di <= 1; di++) {
+                        for (let dj = -1; dj <= 1; dj++) {
+                            let ni = i + di;
+                            let nj = j + dj;
+                            if (ni >= 0 && ni < mineRows && nj >= 0 && nj < mineCols && mineGrid[ni][nj] == -1) {
+                                count++;
+                            }
+                        }
+                    }
+                    mineGrid[i][j] = count;
+                }
+            }
+        }
+
+        // 翻开格子
+        function revealCell(row, col) {
+            if (!mineGameActive) return;
+            if (mineRevealed[row][col] || mineFlagged[row][col]) return;
+            
+            mineRevealed[row][col] = true;
+            
+            if (mineGrid[row][col] == -1) {
+                mineGameActive = false;
+                revealAllMines();
+                showGameResult('💥 踩到地雷了！损失 ' + mineBetAmount + ' 积分', false);
+                
+                let points = getUserPoints(currentUserCard.cardNo);
+                points = updateUserPoints(currentUserCard.cardNo, -mineBetAmount);
+                updatePointsDisplay(points);
+                updateGameStats(currentUserCard.cardNo, false);
+                
+                return;
+            }
+            
+            if (mineGrid[row][col] == 0) {
+                for (let di = -1; di <= 1; di++) {
+                    for (let dj = -1; dj <= 1; dj++) {
+                        let ni = row + di;
+                        let nj = col + dj;
+                        if (ni >= 0 && ni < mineRows && nj >= 0 && nj < mineCols && !mineRevealed[ni][nj] && !mineFlagged[ni][nj]) {
+                            revealCell(ni, nj);
+                        }
+                    }
+                }
+            }
+            
+            updateMinesweeperGrid();
+            checkWin();
+        }
+
+        // 检查胜利
+        function checkWin() {
+            let revealed = 0;
+            let total = mineRows * mineCols;
+            
+            for (let i = 0; i < mineRows; i++) {
+                for (let j = 0; j < mineCols; j++) {
+                    if (mineRevealed[i][j]) revealed++;
+                }
+            }
+            
+            if (revealed == total - mineTotalMines) {
+                mineGameActive = false;
+                let winAmount = mineBetAmount * 2;
+                let points = getUserPoints(currentUserCard.cardNo);
+                points = updateUserPoints(currentUserCard.cardNo, winAmount);
+                updatePointsDisplay(points);
+                
+                showGameResult('🎉 恭喜！扫雷成功！获得 ' + winAmount + ' 积分', true);
+                updateGameStats(currentUserCard.cardNo, true);
+                checkAchievements('mine', winAmount, mineBetAmount);
+                
+                for (let i = 0; i < mineRows; i++) {
+                    for (let j = 0; j < mineCols; j++) {
+                        if (mineGrid[i][j] == -1) {
+                            mineFlagged[i][j] = true;
+                        }
+                    }
+                }
+                updateMinesweeperGrid();
+            }
+        }
+
+        // 显示所有地雷
+        function revealAllMines() {
+            for (let i = 0; i < mineRows; i++) {
+                for (let j = 0; j < mineCols; j++) {
+                    if (mineGrid[i][j] == -1) {
+                        mineRevealed[i][j] = true;
+                    }
+                }
+            }
+            updateMinesweeperGrid();
+        }
+
+        // 更新扫雷网格
+        function updateMinesweeperGrid() {
+            let grid = document.getElementById('minesweeperGrid');
+            let html = '';
+            
+            for (let i = 0; i < mineRows; i++) {
+                for (let j = 0; j < mineCols; j++) {
+                    let cellClass = 'mine-cell';
+                    let content = '';
+                    
+                    if (mineRevealed[i][j]) {
+                        cellClass += ' revealed';
+                        if (mineGrid[i][j] == -1) {
+                            cellClass += ' mine';
+                            content = '💣';
+                        } else if (mineGrid[i][j] > 0) {
+                            content = mineGrid[i][j];
+                        }
+                    } else if (mineFlagged[i][j]) {
+                        cellClass += ' flagged';
+                        content = '🚩';
+                    }
+                    
+                    html += `<div class="${cellClass}" onclick="handleMineClick(${i}, ${j})" oncontextmenu="handleMineRightClick(event, ${i}, ${j})">${content}</div>`;
+                }
+            }
+            
+            grid.innerHTML = html;
+            
+            let flagged = 0;
+            for (let i = 0; i < mineRows; i++) {
+                for (let j = 0; j < mineCols; j++) {
+                    if (mineFlagged[i][j]) flagged++;
+                }
+            }
+            document.getElementById('mineCounter').innerHTML = '💣 ' + (mineTotalMines - flagged);
+        }
+
+        // 处理扫雷点击
+        function handleMineClick(row, col) {
+            if (!mineGameActive) return;
+            
+            if (flagMode) {
+                toggleFlag(row, col);
+            } else {
+                if (mineFirstClick) {
+                    mineGameActive = true;
+                    mineFirstClick = false;
+                    placeMines(row, col);
+                }
+                revealCell(row, col);
+            }
+        }
+
+        // 处理右键
+        function handleMineRightClick(event, row, col) {
+            event.preventDefault();
+            if (!mineGameActive) return;
+            toggleFlag(row, col);
+        }
+
+        // 切换插旗
+        function toggleFlag(row, col) {
+            if (mineRevealed[row][col]) return;
+            mineFlagged[row][col] = !mineFlagged[row][col];
+            updateMinesweeperGrid();
+        }
+
+        // 切换插旗模式
+        function toggleFlagMode() {
+            flagMode = !flagMode;
+            document.getElementById('flagModeBtn').style.background = flagMode ? 
+                'rgba(255,152,0,0.3)' : 'rgba(255,255,255,0.2)';
+        }
+
+        // 自动翻开
+        function autoReveal() {
+            if (!mineGameActive) return;
+            
+            for (let i = 0; i < mineRows; i++) {
+                for (let j = 0; j < mineCols; j++) {
+                    if (mineRevealed[i][j] && mineGrid[i][j] > 0) {
+                        let flaggedCount = 0;
+                        for (let di = -1; di <= 1; di++) {
+                            for (let dj = -1; dj <= 1; dj++) {
+                                let ni = i + di;
+                                let nj = j + dj;
+                                if (ni >= 0 && ni < mineRows && nj >= 0 && nj < mineCols) {
+                                    if (mineFlagged[ni][nj]) flaggedCount++;
+                                }
+                            }
+                        }
+                        
+                        if (flaggedCount == mineGrid[i][j]) {
+                            for (let di = -1; di <= 1; di++) {
+                                for (let dj = -1; dj <= 1; dj++) {
+                                    let ni = i + di;
+                                    let nj = j + dj;
+                                    if (ni >= 0 && ni < mineRows && nj >= 0 && nj < mineCols) {
+                                        if (!mineRevealed[ni][nj] && !mineFlagged[ni][nj]) {
+                                            revealCell(ni, nj);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 开始扫雷
+        function startMinesweeper() {
+            if (!currentUserCard) return;
+            
+            mineBetAmount = parseInt(document.getElementById('mineBet').value);
+            if (mineBetAmount < 1) mineBetAmount = 1;
+            
+            let points = getUserPoints(currentUserCard.cardNo);
+            if (points < mineBetAmount) {
+                showGameResult('❌ 积分不足！需要 ' + mineBetAmount + ' 积分', false);
+                return;
+            }
+            
+            initMinesweeper();
+            mineGameActive = true;
+            document.getElementById('startMineBtn').disabled = true;
+        }
+
+        // 更新积分显示
+        function updatePointsDisplay(points) {
+            document.getElementById('userPoints').innerText = points;
+            document.getElementById('gamesPoints').innerText = points + ' 积分';
+            document.getElementById('gamesPointsDisplay').innerText = points;
+        }
+
+        // 返回我的卡密
+        function backToMyCards() {
+            let mycardsPage = document.getElementById('mycardsPage');
+            mycardsPage.style.display = 'block';
+            mycardsPage.classList.remove('enter-animation');
+            void mycardsPage.offsetWidth;
+            mycardsPage.classList.add('enter-animation');
+            
+            document.getElementById('gamesPage').style.display = 'none';
+            
+            if (currentUserCard) {
+                let points = getUserPoints(currentUserCard.cardNo);
+                document.getElementById('userPoints').innerText = points;
+            }
+            
+            if (cooldownTimer) {
+                clearInterval(cooldownTimer);
+                cooldownActive = false;
+            }
+        }
+
+        // 玩游戏
+        function playGame(game) {
+            if (!currentUserCard) return;
+            if (cooldownActive) {
+                showGameResult('❌ 冷却中，请等待 ' + cooldownSeconds + ' 秒', false);
+                return;
+            }
+            
+            let points = getUserPoints(currentUserCard.cardNo);
+            let cost = 0;
+            let win = 0;
+            let message = '';
+            let isWin = true;
+            
+            switch(game) {
+                case 'daily':
+                    let lastSign = localStorage.getItem('lastSign_' + currentUserCard.cardNo);
+                    let today = new Date().toDateString();
+                    
+                    if (lastSign == today) {
+                        showGameResult('❌ 今天已经签过到了', false);
+                        return;
+                    }
+                    
+                    win = Math.floor(Math.random() * 11) + 5;
+                    points = updateUserPoints(currentUserCard.cardNo, win);
+                    localStorage.setItem('lastSign_' + currentUserCard.cardNo, today);
+                    message = `✅ 签到成功！获得 ${win} 积分`;
+                    break;
+                    
+                case 'wheel':
+                    cost = 8;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要8积分）', false);
+                        return;
+                    }
+                    
+                    if (Math.random() < 0.3) {
+                        win = Math.floor(Math.random() * 41) + 10;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🎡 恭喜！获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `😢 很遗憾，没有中奖，损失 ${cost} 积分`;
+                        isWin = false;
+                    }
+                    break;
+                    
+                case 'scratch':
+                    cost = 5;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要5积分）', false);
+                        return;
+                    }
+                    
+                    if (Math.random() < 0.4) {
+                        win = Math.floor(Math.random() * 21) + 10;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🎫 恭喜！刮出 ${win} 积分（净赚 ${win-cost}）`;
+                    } else {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `😢 很遗憾，没有中奖，损失 ${cost} 积分`;
+                        isWin = false;
+                    }
+                    break;
+                    
+                case 'dice':
+                    cost = 3;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要3积分）', false);
+                        return;
+                    }
+                    
+                    let dice = Math.floor(Math.random() * 6) + 1;
+                    if (dice <= 2) {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `🎲 掷出 ${dice} 点，损失 ${cost} 积分`;
+                        isWin = false;
+                    } else if (dice <= 4) {
+                        message = `🎲 掷出 ${dice} 点，保本`;
+                    } else {
+                        win = cost * 2;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🎲 掷出 ${dice} 点！获得 ${win} 积分（净赚 ${win-cost}）`;
+                        if (dice == 6) {
+                            updateAchievement(currentUserCard.cardNo, 'lucky7');
+                        }
+                    }
+                    break;
+                    
+                case 'slot':
+                    cost = 15;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要15积分）', false);
+                        return;
+                    }
+                    
+                    if (Math.random() < 0.2) {
+                        win = Math.floor(Math.random() * 71) + 30;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🎰 大奖！获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `😢 很遗憾，没有中奖，损失 ${cost} 积分`;
+                        isWin = false;
+                    }
+                    break;
+                    
+                case 'treasure':
+                    cost = 10;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要10积分）', false);
+                        return;
+                    }
+                    
+                    if (Math.random() < 0.35) {
+                        win = Math.floor(Math.random() * 31) + 20;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `💎 挖到宝藏！获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `😢 很遗憾，什么都没有，损失 ${cost} 积分`;
+                        isWin = false;
+                    }
+                    break;
+                    
+                case 'card':
+                    cost = 4;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要4积分）', false);
+                        return;
+                    }
+                    
+                    let card = Math.floor(Math.random() * 13) + 1;
+                    if (card > 7) {
+                        win = cost * 2;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🃏 抽到 ${card} 点，猜大正确！获得 ${win} 积分`;
+                    } else if (card < 7) {
+                        win = cost * 2;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🃏 抽到 ${card} 点，猜小正确！获得 ${win} 积分`;
+                    } else {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `🃏 抽到 ${card} 点，平局，损失 ${cost} 积分`;
+                        isWin = false;
+                    }
+                    break;
+                    
+                case 'coin':
+                    cost = 2;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要2积分）', false);
+                        return;
+                    }
+                    
+                    let coin = Math.random() < 0.5;
+                    if (coin) {
+                        win = cost * 2;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🪙 抛到正面！获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `🪙 抛到反面，损失 ${cost} 积分`;
+                        isWin = false;
+                    }
+                    break;
+                    
+                case 'fish':
+                    cost = 12;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要12积分）', false);
+                        return;
+                    }
+                    
+                    let fish = Math.random();
+                    if (fish < 0.3) {
+                        win = Math.floor(Math.random() * 51) + 30;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🐟 捕到大鱼！获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else if (fish < 0.6) {
+                        win = Math.floor(Math.random() * 21) + 10;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🐟 捕到小鱼，获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `🐟 鱼跑了，损失 ${cost} 积分`;
+                        isWin = false;
+                    }
+                    break;
+                    
+                case 'lucky':
+                    cost = 20;
+                    if (points < cost) {
+                        showGameResult('❌ 积分不足（需要20积分）', false);
+                        return;
+                    }
+                    
+                    let lucky = Math.random();
+                    if (lucky < 0.1) {
+                        win = 200;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🍀 超级大奖！获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else if (lucky < 0.3) {
+                        win = 100;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🍀 大奖！获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else if (lucky < 0.6) {
+                        win = 50;
+                        points = updateUserPoints(currentUserCard.cardNo, win - cost);
+                        message = `🍀 中奖！获得 ${win} 积分（净赚 ${win-cost}）`;
+                    } else {
+                        points = updateUserPoints(currentUserCard.cardNo, -cost);
+                        message = `😢 很遗憾，没有中奖，损失 ${cost} 积分`;
+                        isWin = false;
+                    }
+                    break;
+            }
+            
+            updatePointsDisplay(points);
+            updateGameStats(currentUserCard.cardNo, isWin);
+            showGameStats();
+            showGameResult(message, isWin);
+            checkAchievements(game, win, cost);
+            startCooldown();
+        }
+
+        // 用户导入预览
+        function previewUserFile() {
+            let file = document.getElementById('userFileInput').files[0];
+            if (!file) return;
+            
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    let content = e.target.result;
+                    let lines = content.split('\n');
+                    
+                    if (lines[0].trim() != 'ENCRYPTED_CARD_V2') {
+                        showResult('error', '❌ 无效的加密文件');
+                        return;
+                    }
+                    
+                    let decrypted = decrypt(lines.slice(1).join('\n').trim());
+                    if (!decrypted) throw new Error('解密失败');
+                    
+                    let importData = JSON.parse(decrypted);
+                    tempImportData = importData;
+                    
+                    let preview = document.getElementById('userPreview');
+                    preview.innerHTML = `📋 发现 ${importData.cards.length} 个卡密<br>`;
+                    preview.innerHTML += `💰 价值: ${Math.min(...importData.cards.map(c=>c.value))}-${Math.max(...importData.cards.map(c=>c.value))}元`;
+                    preview.style.display = 'block';
+                    document.getElementById('confirmImportBtn').style.display = 'block';
+                    
+                } catch (error) {
+                    showResult('error', '❌ 文件解析失败');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // 用户确认导入
+        function confirmUserImport() {
+            if (!tempImportData) return;
+            
+            let cards = JSON.parse(localStorage.getItem('cards')) || [];
+            let nextId = parseInt(localStorage.getItem('nextId')) || 1;
+            let existingNos = new Set(cards.map(c => c.cardNo));
+            let added = 0;
+            
+            tempImportData.cards.forEach(item => {
+                if (!existingNos.has(item.cardNo)) {
+                    cards.push({
+                        id: nextId++,
+                        cardNo: item.cardNo,
+                        value: item.value,
+                        status: CARD_STATUS.UNUSED,
+                        createTime: getTime(),
+                        expireTime: item.expireTime || '永不过期'
+                    });
+                    existingNos.add(item.cardNo);
+                    added++;
+                }
+            });
+            
+            localStorage.setItem('cards', JSON.stringify(cards));
+            localStorage.setItem('nextId', nextId);
+            
+            document.getElementById('userPreview').style.display = 'none';
+            document.getElementById('confirmImportBtn').style.display = 'none';
+            document.getElementById('userFileInput').value = '';
+            
+            showResult('success', `✅ 导入成功！新增 ${added} 个卡密`);
+            
+            if (currentUserCard) {
+                showMyCards();
+            }
+            
+            tempImportData = null;
+        }
+
+        // 管理后台函数
+        function logoutAdmin() {
+            document.getElementById('adminPage').style.display = 'none';
+            showTab('verify');
+            selectedCardIds.clear();
+        }
+
+        function generateCards() {
+            let count = parseInt(document.getElementById('genCount').value) || 1;
+            let value = parseInt(document.getElementById('genValue').value) || 100;
+            let days = parseInt(document.getElementById('expireDays').value) || 0;
+            
+            let cards = JSON.parse(localStorage.getItem('cards')) || [];
+            let nextId = parseInt(localStorage.getItem('nextId')) || 1;
+            let newNos = [];
+            
+            for (let i = 0; i < count; i++) {
+                let no = generateFormattedCardNo();
+                let expireTime = getExpireTime(days);
+                cards.push({
+                    id: nextId++,
+                    cardNo: no,
+                    value: value,
+                    status: CARD_STATUS.UNUSED,
+                    createTime: getTime(),
+                    expireTime: expireTime
+                });
+                newNos.push(no);
+            }
+            
+            localStorage.setItem('cards', JSON.stringify(cards));
+            localStorage.setItem('nextId', nextId);
+            
+            let msg = '✅ 生成成功！\n\n' + newNos.join('\n');
+            alert(msg);
+            
+            showCards();
+            updateStats();
+        }
+
+        function updateExpiredStatus() {
+            let cards = JSON.parse(localStorage.getItem('cards')) || [];
+            let changed = false;
+            cards.forEach(c => {
+                if ((c.status == CARD_STATUS.UNUSED || c.status == CARD_STATUS.USING) && c.expireTime && c.expireTime != '永不过期') {
+                    if (new Date(c.expireTime) < new Date()) {
+                        c.status = CARD_STATUS.EXPIRED;
+                        changed = true;
+                    }
+                }
+            });
+            if (changed) localStorage.setItem('cards', JSON.stringify(cards));
+        }
+
+        function showCards() {
+            updateExpiredStatus();
+            let cards = JSON.parse(localStorage.getItem('cards')) || [];
+            let filter = document.getElementById('statusFilter').value;
+            let search = document.getElementById('searchCard').value.toLowerCase();
+            
+            let filtered = cards.filter(c => {
+                if (filter != 'all' && c.status != filter) return false;
+                if (search && !c.cardNo.toLowerCase().includes(search)) return false;
+                return true;
+            }).reverse();
+            
+            if (filtered.length == 0) {
+                document.getElementById('cardList').innerHTML = '<div style="text-align:center; padding:20px;">暂无卡密</div>';
+                return;
+            }
+            
+            let html = '';
+            filtered.forEach(card => {
+                let statusText = ['未使用', '已使用', '已封禁', '已过期', '使用中'][card.status];
+                let statusColor = card.status == 0 ? 'rgba(226,232,240,0.3)' : 
+                                 card.status == 1 ? 'rgba(40,167,69,0.3)' : 
+                                 card.status == 2 ? 'rgba(220,53,69,0.3)' : 
+                                 card.status == 3 ? 'rgba(255,193,7,0.3)' : 'rgba(255,152,0,0.3)';
+                let selected = selectedCardIds.has(card.id) ? 'background: rgba(255,255,255,0.2);' : '';
+                
+                html += `
+                    <div style="background:rgba(255,255,255,0.1); padding:12px; margin-bottom:8px; border-radius:10px; border-left:5px solid ${card.status == 4 ? '#ff9800' : '#667eea'}; ${selected}">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+                            <span style="font-weight:bold;">
+                                <input type="checkbox" ${selectedCardIds.has(card.id)?'checked':''} onclick="toggleSelectCard(${card.id})" style="width:18px;height:18px;margin-right:5px;">
+                                ${formatCardNo(card.cardNo)}
+                            </span>
+                            <span style="padding:2px 8px; border-radius:12px; background:${statusColor}">${statusText}</span>
+                        </div>
+                        <div style="font-size:13px; color:rgba(255,255,255,0.8);">
+                            <div>💰 ${card.value}元 | 📅 生成：${card.createTime}</div>
+                            <div>⏰ 到期：${card.expireTime || '永不过期'}</div>
+                        </div>
+                        ${card.loginTime ? `<div style="font-size:13px; color:#ff9800; margin-top:5px;">⏰ 登录：${card.loginTime}</div>` : ''}
+                        ${card.usedTime ? `<div style="font-size:13px; color:#28a745; margin-top:5px;">✅ 使用：${card.usedTime}</div>` : ''}
+                        <div style="display:flex; gap:5px; margin-top:8px;">
+                            ${card.status != 2 && card.status != 1 ? `<button style="flex:1; padding:5px; background:#dc3545; color:white; border:none; border-radius:5px;" onclick="banCard(${card.id})">封禁</button>` : ''}
+                            ${card.status == 2 ? `<button style="flex:1; padding:5px; background:#28a745; color:white; border:none; border-radius:5px;" onclick="unbanCard(${card.id})">解封</button>` : ''}
+                            <button style="flex:1; padding:5px; background:#999; color:white; border:none; border-radius:5px;" onclick="deleteCard(${card.id})">删除</button>
+                        </div>
+                    </div>
+                `;
+            });
+            document.getElementById('cardList').innerHTML = html;
+            updateSelectedCount();
+        }
+
+        function updateStats() {
+            let cards = JSON.parse(localStorage.getItem('cards')) || [];
+            document.getElementById('totalCards').innerText = cards.length;
+            document.getElementById('unusedCards').innerText = cards.filter(c => c.status == CARD_STATUS.UNUSED).length;
+            document.getElementById('usingCards').innerText = cards.filter(c => c.status == CARD_STATUS.USING).length;
+            document.getElementById('usedCards').innerText = cards.filter(c => c.status == CARD_STATUS.USED).length;
+            document.getElementById('expiredCards').innerText = cards.filter(c => c.status == CARD_STATUS.EXPIRED).length;
+        }
+
+        function toggleSelectCard(id) {
+            if (selectedCardIds.has(id)) selectedCardIds.delete(id);
+            else selectedCardIds.add(id);
+            showCards();
+        }
+
+        function selectAllCards() {
+            JSON.parse(localStorage.getItem('cards')).forEach(c => selectedCardIds.add(c.id));
+            showCards();
+        }
+
+        function deselectAllCards() {
+            selectedCardIds.clear();
+            showCards();
+        }
+
+        function updateSelectedCount() {
+            document.getElementById('selectedCount').innerText = selectedCardIds.size;
+        }
+
+        function exportSelectedCards() {
+            if (selectedCardIds.size == 0) return alert('请先选择卡密');
+            
+            let cards = JSON.parse(localStorage.getItem('cards')).filter(c => selectedCardIds.has(c.id));
+            let data = {
+                version: '1.0',
+                exportTime: getTime(),
+                count: cards.length,
+                cards: cards.map(c => ({
+                    cardNo: c.cardNo,
+                    value: c.value,
+                    expireTime: c.expireTime
+                }))
+            };
+            
+            let content = 'ENCRYPTED_CARD_V2\n' + encrypt(JSON.stringify(data));
+            let blob = new Blob(['\uFEFF' + content], {type: 'text/plain'});
+            let url = URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = '卡密_' + getTime().replace(/[:\-\s]/g, '') + '.txt';
+            a.click();
+            alert(`✅ 已导出 ${cards.length} 个卡密`);
+        }
+
+        function banCard(id) {
+            let cards = JSON.parse(localStorage.getItem('cards'));
+            let card = cards.find(c => c.id == id);
+            if (card && confirm('确定封禁？')) {
+                card.status = CARD_STATUS.BANNED;
+                localStorage.setItem('cards', JSON.stringify(cards));
+                showCards();
+                updateStats();
+            }
+        }
+
+        function unbanCard(id) {
+            let cards = JSON.parse(localStorage.getItem('cards'));
+            let card = cards.find(c => c.id == id);
+            if (card) {
+                card.status = (card.expireTime && card.expireTime != '永不过期' && new Date(card.expireTime) < new Date()) ? CARD_STATUS.EXPIRED : CARD_STATUS.UNUSED;
+                localStorage.setItem('cards', JSON.stringify(cards));
+                showCards();
+                updateStats();
+            }
+        }
+
+        function deleteCard(id) {
+            if (confirm('确定删除？')) {
+                let cards = JSON.parse(localStorage.getItem('cards')).filter(c => c.id != id);
+                selectedCardIds.delete(id);
+                localStorage.setItem('cards', JSON.stringify(cards));
+                showCards();
+                updateStats();
+            }
+        }
+
+        function previewAdminFile() {
+            let file = document.getElementById('adminFileInput').files[0];
+            if (!file) return;
+            
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    let content = e.target.result;
+                    let cards = [];
+                    
+                    if (file.name.endsWith('.json')) {
+                        cards = JSON.parse(content).cards || JSON.parse(content);
+                    } else {
+                        let lines = content.split('\n');
+                        if (lines[0].trim() == 'ENCRYPTED_CARD_V2') {
+                            let decrypted = decrypt(lines.slice(1).join('\n').trim());
+                            cards = JSON.parse(decrypted).cards;
+                        } else {
+                            lines.forEach(l => l.trim() && cards.push({cardNo: l.trim(), value: 100}));
+                        }
+                    }
+                    
+                    tempImportData = {cards};
+                    tempImportSource = 'admin';
+                    
+                    let preview = document.getElementById('adminPreview');
+                    preview.innerHTML = `📋 发现 ${cards.length} 个卡密`;
+                    preview.style.display = 'block';
+                    document.getElementById('adminConfirmImportBtn').style.display = 'block';
+                    
+                } catch (error) {
+                    alert('文件解析失败');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function confirmAdminImport() {
+            if (!tempImportData) return;
+            
+            let cards = JSON.parse(localStorage.getItem('cards')) || [];
+            let nextId = parseInt(localStorage.getItem('nextId')) || 1;
+            let existingNos = new Set(cards.map(c => c.cardNo));
+            let added = 0;
+            
+            tempImportData.cards.forEach(item => {
+                if (!existingNos.has(item.cardNo)) {
+                    cards.push({
+                        id: nextId++,
+                        cardNo: item.cardNo,
+                        value: item.value || 100,
+                        status: CARD_STATUS.UNUSED,
+                        createTime: getTime(),
+                        expireTime: item.expireTime || '永不过期'
+                    });
+                    added++;
+                }
+            });
+            
+            localStorage.setItem('cards', JSON.stringify(cards));
+            localStorage.setItem('nextId', nextId);
+            
+            document.getElementById('adminPreview').style.display = 'none';
+            document.getElementById('adminConfirmImportBtn').style.display = 'none';
+            document.getElementById('adminFileInput').value = '';
+            
+            alert(`✅ 导入成功！新增 ${added} 个`);
+            showCards();
+            updateStats();
+            tempImportData = null;
+        }
+
+        // 页面关闭时清理
+        window.addEventListener('beforeunload', function() {
+            if (cooldownTimer) {
+                clearInterval(cooldownTimer);
+            }
+            if (currentUserCard) {
+                let cards = JSON.parse(localStorage.getItem('cards')) || [];
+                let card = cards.find(c => c.id == currentUserCard.id);
+                if (card && card.status == CARD_STATUS.USING) {
+                    card.status = CARD_STATUS.UNUSED;
+                    delete card.loginTime;
+                    localStorage.setItem('cards', JSON.stringify(cards));
+                }
+            }
+        });
+    </script>
+</body>
+</html>
