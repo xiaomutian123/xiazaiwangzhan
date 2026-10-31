@@ -1,11 +1,9 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>网站源代码测试 · CSS & JS</title>
-  <!-- 引入外部CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +16,7 @@
       ⚡ 交互式源代码测试 · 点击按钮 / 输入文本 / 切换主题
     </div>
 
-    <!-- 计数器区域 -->
+    <!-- 计数器 -->
     <div class="counter-section">
       <div class="counter-display">
         <span class="counter-label">计数器</span>
@@ -31,7 +29,7 @@
       </div>
     </div>
 
-    <!-- 实时输入回显 -->
+    <!-- 实时回显 -->
     <div class="input-group">
       <label for="echoInput">📝 实时回显 (输入任何内容)</label>
       <div class="input-wrapper">
@@ -62,7 +60,7 @@
     </div>
   </div>
 
-  <!-- 引入外部JS -->
+  <!-- JS 放在 body 末尾，确保 DOM 已加载 -->
   <script src="script.js"></script>
 </body>
 </html>
